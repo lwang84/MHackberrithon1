@@ -7,7 +7,6 @@
 //
 
 #import "MHImagePickerController.h"
-#import "OverlayView.h"
 
 @interface MHImagePickerController ()
 
@@ -29,6 +28,7 @@
     [super viewDidLoad];
     
     OverlayView *overlay = [[OverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-200, SCREEN_HEIGTH-200)];
+    overlay.delegate = self;
 	
 	// Create a new image picker instance:
 	//UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -56,6 +56,11 @@
     
     
 	// Do any additional setup after loading the view.
+}
+
+- (void) needTakePicture: (OverlayView *)overlay;
+{
+    NSLog(@"SDFSD");
 }
 
 - (void)didReceiveMemoryWarning

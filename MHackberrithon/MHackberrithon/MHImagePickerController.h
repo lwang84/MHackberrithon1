@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OverlayView.h"
 
 // Transform values for full screen support:
 #define CAMERA_TRANSFORM_X 1
@@ -17,6 +18,6 @@
 #define SCREEN_WIDTH  320
 #define SCREEN_HEIGTH 480
 
-@interface MHImagePickerController : UIImagePickerController
+@interface MHImagePickerController : UIImagePickerController <MHOverlayViewDelegate>
 
 @end

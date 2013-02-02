@@ -13,6 +13,8 @@
 
 @implementation OverlayView
 
+@synthesize delegate;
+
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -27,8 +29,24 @@
 		// Add a target action for the button:
 		[scanButton addTarget:self action:@selector(scanButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:scanButton];
+        
+        
+        UIButton *capture = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 50)];
+        [capture setTitle:@"aaa" forState:UIControlStateNormal];
+        [capture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        
+        [capture addTarget:self action:@selector(captureTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        [self addSubview:capture];
+        [self bringSubviewToFront:capture];
     }
     return self;
+}
+
+- (void) captureTapped: (UIButton *)capture
+{
+    [self.delegate needTakePicture:self];
 }
 
 - (void) scanButtonTouchUpInside {
@@ -52,6 +70,8 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 }
+
+
 
 
 
