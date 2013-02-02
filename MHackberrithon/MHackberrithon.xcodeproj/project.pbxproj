@@ -32,6 +32,7 @@
 		430AA33D16BCFE730064D0DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33A16BCFE730064D0DA /* Accounts.framework */; };
 		430AA33E16BCFE730064D0DA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33B16BCFE730064D0DA /* AdSupport.framework */; };
 		430AA33F16BCFE730064D0DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33C16BCFE730064D0DA /* Social.framework */; };
+		430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA34516BD01EF0064D0DA /* MHLoginViewController.m */; };
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHOverlayView.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
@@ -231,6 +232,8 @@
 		430AA33A16BCFE730064D0DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		430AA33B16BCFE730064D0DA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		430AA33C16BCFE730064D0DA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		430AA34416BD01EF0064D0DA /* MHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHLoginViewController.h; sourceTree = "<group>"; };
+		430AA34516BD01EF0064D0DA /* MHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHLoginViewController.m; sourceTree = "<group>"; };
 		FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImagePickerController.h; sourceTree = "<group>"; };
 		FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImagePickerController.m; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHOverlayView.h; sourceTree = "<group>"; };
@@ -287,7 +290,6 @@
 				FCCEAAF616BCECA600317762 /* eng.traineddata */,
 				FCCEAAF716BCECA600317762 /* sample1.jpg */,
 				FCCEAAF316BCE53D00317762 /* scanbutton.png */,
-				FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */,
 				430AA19D16BCCEE10064D0DA /* MHackberrithon */,
 				430AA1C116BCCEE10064D0DA /* MHackberrithonTests */,
 				430AA19616BCCEE10064D0DA /* Frameworks */,
@@ -307,6 +309,7 @@
 		430AA19616BCCEE10064D0DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */,
 				430AA33A16BCFE730064D0DA /* Accounts.framework */,
 				430AA33B16BCFE730064D0DA /* AdSupport.framework */,
 				430AA33C16BCFE730064D0DA /* Social.framework */,
@@ -341,6 +344,8 @@
 				FCCEAAED16BCE4FB00317762 /* ScanButton.h */,
 				FCCEAAEE16BCE4FB00317762 /* ScanButton.m */,
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
+				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
+				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
 			);
 			path = MHackberrithon;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				FCCEAAF116BCE4FB00317762 /* ScanButton.m in Sources */,
 				430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */,
 				FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */,
+				430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
