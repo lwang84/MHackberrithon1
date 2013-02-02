@@ -27,4 +27,9 @@
 - (int) getBoxesCount;
 - (CGRect) getBoxes:(int) i;
 
+- (void) getBlockBoxes;
+- (int) getBlockCount;
+- (CGRect) getBlock:(int) i;
+-(BOOL) recognizeByWord;
+
 @end

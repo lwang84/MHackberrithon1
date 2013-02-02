@@ -98,14 +98,19 @@
     CGSize size = [nImage size];
     [tesseract setImage:nImage];
     //[tesseract recognize];
-    
+    NSLog(@"start");
+    [tesseract recognizeByWord];
+    NSLog(@"end");
     [tesseract getWordBoxes];
+    [tesseract getBlockBoxes];
     
     int n = [tesseract getBoxesCount];
+    //int n = [tesseract getBlockCount];
     
     NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
     for (int i = 0; i < n; i++) {
         CGRect box =  [tesseract getBoxes:i];
+        //CGRect box =  [tesseract getBoxes:i];
         [boxes addObject:[NSValue valueWithCGRect:box]];
     }
     

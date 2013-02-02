@@ -7,6 +7,7 @@
 //
 
 #import "MHFreezeCameraButton.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation MHFreezeCameraButton
 
@@ -14,10 +15,19 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setTitle:@"aaa" forState:UIControlStateNormal];
-        [self setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        self.backgroundColor = [UIColor greenColor];
-        // Initialization code
+        
+        self.layer.cornerRadius = 10;
+        self.clipsToBounds = NO;
+        self.layer.shadowOffset = CGSizeMake(0, 0);
+        self.layer.shadowRadius = 0;
+        self.layer.shadowOpacity = 0.3;
+        
+        [self setBackgroundColor:[UIColor colorWithRed:0.0/255 green:164.0/255 blue:248.0/255 alpha:1]];
+        [self setTitleColor:[UIColor whiteColor]
+                   forState:UIControlStateNormal];
+        
+        [self setTitle:@"Capture" forState:UIControlStateNormal];
+        self.alpha = 0.85;
     }
     return self;
 }
