@@ -14,6 +14,8 @@
 
 @interface MHViewController ()
 
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
+
 @end
 
 @implementation MHViewController
@@ -85,7 +87,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

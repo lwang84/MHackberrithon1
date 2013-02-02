@@ -40,6 +40,10 @@
         
         [self addSubview:capture];
         [self bringSubviewToFront:capture];
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        
+        [self addGestureRecognizer:tapGesture];
     }
     return self;
 }
@@ -47,19 +51,6 @@
 - (void) captureTapped: (UIButton *)capture
 {
     [self.delegate needTakePicture:self];
-}
-
-- (void) scanButtonTouchUpInside {
-	UILabel *scanningLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 120, 30)];
-	scanningLabel.backgroundColor = [UIColor clearColor];
-	scanningLabel.font = [UIFont fontWithName:@"Courier" size: 18.0];
-	scanningLabel.textColor = [UIColor redColor]; 
-	scanningLabel.text = @"Scanning...";
-	
-	[self addSubview:scanningLabel];
-	
-	[self performSelector:@selector(clearLabel:) withObject:scanningLabel afterDelay:2];
-	
 }
 
 - (void)clearLabel:(UILabel *)label {
@@ -71,7 +62,11 @@
     // Drawing code
 }
 
-
+- (void) tap: (UIGestureRecognizer *) tapGesture {
+    CGPoint location = [tapGesture locationInView:self.superview];
+    NSLog(@"%f", location.x);
+    
+}
 
 
 

@@ -19,7 +19,6 @@
 
 }
 
-- (void)scanButtonTouchUpInside;
 - (void)clearLabel:(UILabel *)label;
 @property (assign) id <MHOverlayViewDelegate> delegate;
 
