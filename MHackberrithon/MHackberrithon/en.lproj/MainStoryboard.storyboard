@@ -8,7 +8,7 @@
         <scene sceneID="WeA-4a-kNb">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="gXM-Az-q2d" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="saD-vm-xs7">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="77" y="-442"/>
         </scene>
-        <!--Camera Controller - Camera-->
+        <!--Image Picker Controller - Camera-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="MHCameraController" sceneMemberID="viewController">
+                <viewController id="2" customClass="MHImagePickerController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,8 +70,8 @@
         </scene>
     </scenes>
     <classes>
-        <class className="MHCameraController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MHCameraController.h"/>
+        <class className="MHImagePickerController" superclassName="UIImagePickerController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MHImagePickerController.h"/>
         </class>
         <class className="OverlayViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OverlayViewController.h"/>
