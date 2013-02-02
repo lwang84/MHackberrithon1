@@ -14,10 +14,15 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         [self setBackgroundColor:[UIColor clearColor]];
+        UIButton *capture = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 50)];
+        [capture setTitle:@"sdfsdf" forState:UIControlStateNormal];
+        [capture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [self addSubview:capture];
+        [self bringSubviewToFront:capture];
+
     }
     return self;
 }
-
 
 - (void)drawRect:(CGRect)rect {
     

@@ -20,11 +20,18 @@
 {
     [super viewDidLoad];
     
+    
+    
+    
+    
+    /*
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     [tesseract setImage:[UIImage imageNamed:@"sample1.jpg"]];
     [tesseract recognize];
     
     NSLog(@"%@", [tesseract recognizedText]);
+     */
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
