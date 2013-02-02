@@ -26,4 +26,5 @@
 @property (retain) UIImageView *staticImageView;
 @property (retain) MHFreezeCameraButton *freezeButton;
 @property (retain) MHBoxesView *boxesLayer;
+
 @end

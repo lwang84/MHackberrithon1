@@ -11,6 +11,9 @@
 
 @interface MHBoxesView : UIView
 
-- (void)setBoxesWithTesseract:(Tesseract*)tess imageSize:(CGSize) size;
+- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size;
+
+@property NSMutableArray *boxes;
+@property CGSize imageSize;
 
 @end

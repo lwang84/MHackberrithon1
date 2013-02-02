@@ -14,15 +14,16 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        //self.backgroundColor = [UIColor yellowColor];
+        self.backgroundColor = [UIColor clearColor];
         // Initialization code
     }
     return self;
 }
 
-- (void)setBoxesWithTesseract:(Tesseract*)tess imageSize:(CGSize) size
+- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size
 {
-    
+    self.boxes = boxes;
+    self.imageSize = size;
     [self setNeedsDisplay];
 }
 
@@ -30,7 +31,29 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 0.0, 1.0); // yellow line
+    //CGRect box = CGRectMake(50, 50, 50, 50);
+    
+    //CGContextStrokeRect(context, box);
+    //CGContextStrokePath(context);
+    
     // Drawing code
+    for (int i = 0; i < [self.boxes count]; i++) {
+        CGRect box =  [(NSValue *)[self.boxes objectAtIndex:i] CGRectValue];
+        
+        CGContextStrokeRect(context, [self scaleBox:box]);
+        CGContextStrokePath(context);
+    }
+    
+    
+}
+
+- (CGRect)scaleBox:(CGRect) box {
+    return CGRectMake(box.origin.x/self.imageSize.width * self.frame.size.width,
+                      box.origin.y/self.imageSize.height * self.frame.size.height,
+                      box.size.width/self.imageSize.width * self.frame.size.width,
+                      box.size.height/self.imageSize.height * self.frame.size.height);
 }
 
 

@@ -95,16 +95,19 @@
     
     [tesseract getWordBoxes];
     
-    //(HBOverlayView *)(self.picker.cameraOverlayView).boxe
-    
     int n = [tesseract getBoxesCount];
     
+    NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
     for (int i = 0; i < n; i++) {
         CGRect box =  [tesseract getBoxes:i];
+        [boxes addObject:[NSValue valueWithCGRect:box]];
     }
     
+    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size];
+    //[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer].boxes = boxes;
+
     NSLog(@"box count = %d", n);
-    NSLog(@"%@", [tesseract recognizedText]);
+    //NSLog(@"%@", [tesseract recognizedText]);
 
     //UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:self.image];
