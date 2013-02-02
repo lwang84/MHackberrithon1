@@ -17,7 +17,7 @@
 - (void) needTakePicture: (HBOverlayView *)overlay;
 @end
 
-@interface HBOverlayView : UIView {
+@interface HBOverlayView : UIView <MHBoxesViewDelegate>{
 
 }
 

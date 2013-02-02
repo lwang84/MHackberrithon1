@@ -182,4 +182,8 @@ namespace tesseract {
     return confidence[i];
 }
 
+- (char *) getWordAt: (int) i{
+    return _tesseract->GetBoxText(i);
+}
+
 @end

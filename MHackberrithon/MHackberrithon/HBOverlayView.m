@@ -32,6 +32,7 @@
         
         //boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(self.frame.size.width*1.0/3, 0, self.frame.size.width*1.0/3, self.frame.size.height)];
         boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height*1.0/3, self.frame.size.width, self.frame.size.height*1.0/3)];
+        boxesLayer.delegate = self;
         [self addSubview:boxesLayer];
         [self bringSubviewToFront:boxesLayer];
         
@@ -97,7 +98,11 @@
 
 - (void) tap: (UIGestureRecognizer *) tapGesture {
     CGPoint location = [tapGesture locationInView:self.superview];
-    self.wordLabel.text = [NSString stringWithFormat:@"%f, %f", location.x, location.y];
+    //self.wordLabel.text = [NSString stringWithFormat:@"%f, %f", location.x, location.y];
+}
+
+-(void) needChangeLabel:(NSString *)word {
+    self.wordLabel.text = word;
 }
 
 @end
