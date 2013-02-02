@@ -35,7 +35,7 @@
 
 - (void) buttonTapped: (UIButton *)capture
 {
-    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 300,300)];
+    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, self.view.superview.superview.frame.size.width,self.view.superview.superview.frame.size.height)];
     overlay.delegate = self;
 	
 	// Create a new image picker instance:
@@ -73,8 +73,12 @@
 {
     
     NSLog(@"picture taken");
+
     
     UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:image];
+    
+    /*
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
     
@@ -91,6 +95,8 @@
     
     NSLog(@"box count = %d", n);
     //NSLog(@"%@", [tesseract recognizedText]);
+     */
+     
 }
 
 - (void) needTakePicture: (HBOverlayView *)overlay

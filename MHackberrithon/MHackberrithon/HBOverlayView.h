@@ -21,7 +21,9 @@
 
 - (void)scanButtonTouchUpInside;
 - (void)clearLabel:(UILabel *)label;
+- (void) setStaticImage: (UIImage *) image;
 @property (assign) id <MHOverlayViewDelegate> delegate;
+@property (retain) UIImageView *staticImageView;
 
 
 @end

@@ -34,6 +34,7 @@
 		430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA34516BD01EF0064D0DA /* MHLoginViewController.m */; };
 		430AA35A16BD2B510064D0DA /* MHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA35916BD2B510064D0DA /* MHViewController.xib */; };
 		430AA36416BD2D090064D0DA /* MHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA36316BD2D090064D0DA /* MHLoginViewController.xib */; };
+		FC78D47516BD6820005B3CFF /* MHCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */; };
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
@@ -234,6 +235,8 @@
 		430AA34516BD01EF0064D0DA /* MHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHLoginViewController.m; sourceTree = "<group>"; };
 		430AA35916BD2B510064D0DA /* MHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHViewController.xib; sourceTree = "<group>"; };
 		430AA36316BD2D090064D0DA /* MHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHLoginViewController.xib; sourceTree = "<group>"; };
+		FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCameraMaskView.h; sourceTree = "<group>"; };
+		FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCameraMaskView.m; sourceTree = "<group>"; };
 		FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImagePickerController.h; sourceTree = "<group>"; };
 		FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImagePickerController.m; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHSmileyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSmileyFace.h; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				FCCEAAD216BCD40900317762 /* MHSmileyFace.m */,
 				FCCEAAE916BCE4FA00317762 /* HBOverlayView.h */,
 				FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */,
+				FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */,
+				FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */,
 				FCCEAAED16BCE4FB00317762 /* ScanButton.h */,
 				FCCEAAEE16BCE4FB00317762 /* ScanButton.m */,
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
@@ -700,6 +705,7 @@
 				430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */,
 				FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */,
 				430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */,
+				FC78D47516BD6820005B3CFF /* MHCameraMaskView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
