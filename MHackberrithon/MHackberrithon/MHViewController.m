@@ -7,7 +7,7 @@
 //
 
 #import "MHViewController.h"
-#import "MHOverlayView.h"
+#import "MHSmileyFace.h"
 #import "Tesseract.h"
 
 @interface MHViewController ()

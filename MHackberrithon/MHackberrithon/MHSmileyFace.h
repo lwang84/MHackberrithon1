@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MHOverlayView : UIView{
+@interface MHSmileyFace : UIView{
     
 }
 

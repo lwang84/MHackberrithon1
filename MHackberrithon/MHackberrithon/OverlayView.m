@@ -8,7 +8,7 @@
 
 #import "OverlayView.h"
 #import "ScanButton.h"
-#import "MHOverlayView.h"
+#import "MHSmileyFace.h"
 
 
 @implementation OverlayView
@@ -21,7 +21,7 @@
 		// Clear the background of the overlay:
 		self.opaque = NO;
 		self.backgroundColor = [UIColor clearColor];
-        MHOverlayView *smiley = [[MHOverlayView alloc] initWithFrame:CGRectMake(30, 100, 260, 200)];        
+        MHSmileyFace *smiley = [[MHSmileyFace alloc] initWithFrame:CGRectMake(30, 100, 260, 200)];        
 		[self addSubview:smiley];
 		
 		ScanButton *scanButton = [[ScanButton alloc] initWithFrame:CGRectMake(130, 320, 60, 30)];

@@ -6,16 +6,15 @@
 //  Copyright (c) 2013 Hackberry. All rights reserved.
 //
 
-#import "MHOverlayView.h"
+#import "MHSmileyFace.h"
 
-@implementation MHOverlayView
+@implementation MHSmileyFace
 
 
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         [self setBackgroundColor:[UIColor clearColor]];
-        
     }
     return self;
 }
