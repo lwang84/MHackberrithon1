@@ -18,6 +18,6 @@
 #define SCREEN_WIDTH  320
 #define SCREEN_HEIGTH 480
 
-@interface MHImagePickerController : UIImagePickerController <MHOverlayViewDelegate>
+@interface MHImagePickerController : UIImagePickerController <MHOverlayViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end

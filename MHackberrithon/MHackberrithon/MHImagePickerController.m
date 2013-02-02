@@ -7,6 +7,7 @@
 //
 
 #import "MHImagePickerController.h"
+ #import <MobileCoreServices/UTCoreTypes.h>
 
 @interface MHImagePickerController ()
 
@@ -18,6 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.delegate = self;
         // Custom initialization
     }
     return self;
@@ -37,7 +39,7 @@
 	// Set the image picker source:
 	self.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    //picker.mediaTypes = @[(NSString *) kUTTypeImage,(NSString *) kUTTypeMovie];
+    self.mediaTypes = @[(NSString *) kUTTypeImage,(NSString *) kUTTypeMovie];
     
     self.allowsEditing = YES;
 	
@@ -60,7 +62,29 @@
 
 - (void) needTakePicture: (HBOverlayView *)overlay;
 {
+    [self takePicture];
     NSLog(@"SDFSD");
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+}
+
+- (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker
+{
+    
+    NSLog(@"did cancel camera");
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"picture taken");
 }
 
 - (void)didReceiveMemoryWarning
