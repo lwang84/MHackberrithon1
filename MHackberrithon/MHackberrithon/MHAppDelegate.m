@@ -8,11 +8,28 @@
 
 #import "MHAppDelegate.h"
 
+@interface MHAppDelegate ()
+
+@property (strong, nonatomic) UINavigationController* navController;
+
+@end
+
 @implementation MHAppDelegate
+
+@synthesize navController = _navController;
+@synthesize mainViewController = _mainViewController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [self copyTessDataFile];
+
+    return YES;
+}
+
+- (void) copyTessDataFile {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -24,9 +41,8 @@
     
     NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"eng.traineddata" ofType:nil];
     [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
-    return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
