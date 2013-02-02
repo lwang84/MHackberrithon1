@@ -18,19 +18,7 @@
 
 @implementation MHViewController
 
-<<<<<<< HEAD
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-=======
-
 @synthesize picker;
->>>>>>> ce82e3abc186527490b0878073e4ac7b4caa63bf
 
 - (void)viewDidLoad
 {
@@ -48,8 +36,6 @@
 
 - (void) buttonTapped: (UIButton *)capture
 {
-    
-    
     HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 300,300)];
 	
 	// Create a new image picker instance:
@@ -90,6 +76,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    
     NSLog(@"picture taken");
 }
 

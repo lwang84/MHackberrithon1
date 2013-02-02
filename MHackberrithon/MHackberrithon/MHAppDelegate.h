@@ -14,5 +14,6 @@
 @interface MHAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+- (void)openSession;
 
 @end

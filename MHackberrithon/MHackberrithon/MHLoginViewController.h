@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MHMainTabController.h"
+#import "MHAppDelegate.h"
 
 @interface MHLoginViewController : UIViewController
 - (IBAction)performLogin:(id)sender;
+- (void)loginFailed;
 
-@property MHMainTabController *mainTabController;
+
 @end
