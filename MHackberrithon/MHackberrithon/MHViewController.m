@@ -91,19 +91,22 @@
 
     CGSize size = [nImage size];
     [tesseract setImage:nImage];
-    //[tesseract recognize];
+    [tesseract recognize];
     
     [tesseract getWordBoxes];
     
     int n = [tesseract getBoxesCount];
     
     NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
+    NSMutableArray *confidences = [[NSMutableArray alloc] initWithCapacity:n];
     for (int i = 0; i < n; i++) {
         CGRect box =  [tesseract getBoxes:i];
         [boxes addObject:[NSValue valueWithCGRect:box]];
+        int confidence = [tesseract getWordConfidenceAt:i];
+        [confidences addObject:[NSNumber numberWithInt:confidence]];
     }
     
-    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size];
+    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences];
     //[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer].boxes = boxes;
 
     NSLog(@"box count = %d", n);

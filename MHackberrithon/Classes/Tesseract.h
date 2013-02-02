@@ -26,5 +26,6 @@
 - (void) getWordBoxes;
 - (int) getBoxesCount;
 - (CGRect) getBoxes:(int) i;
+- (int) getWordConfidenceAt: (int) i;
 
 @end
