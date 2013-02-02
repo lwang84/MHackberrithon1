@@ -30,7 +30,7 @@
 		[scanButton addTarget:self action:@selector(scanButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:scanButton];
         
-        
+        //boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(self.frame.size.width*1.0/3, 0, self.frame.size.width*1.0/3, self.frame.size.height)];
         boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height*1.0/3, self.frame.size.width, self.frame.size.height*1.0/3)];
         [self addSubview:boxesLayer];
         [self bringSubviewToFront:boxesLayer];
