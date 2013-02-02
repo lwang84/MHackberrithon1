@@ -34,12 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MHackberrithon/HBOverlayView.m"
-         timestampString = "381514393.788945"
+         timestampString = "381530167.586636"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
-         landmarkName = "-initWithFrame:"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
+         landmarkName = "-setStaticImage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -47,20 +47,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MHackberrithon/MHBoxesView.m"
-         timestampString = "381529162.834155"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43"
-         landmarkName = "-drawRect:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MHackberrithon/MHBoxesView.m"
-         timestampString = "381529162.834155"
+         timestampString = "381530974.034813"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "44"
@@ -73,7 +60,33 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MHackberrithon/MHBoxesView.m"
-         timestampString = "381529162.834155"
+         timestampString = "381530974.034813"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "-drawRect:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MHackberrithon/MHBoxesView.m"
+         timestampString = "381530974.034813"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
+         landmarkName = "-drawRect:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MHackberrithon/MHBoxesView.m"
+         timestampString = "381530974.034813"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "36"
@@ -86,24 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MHackberrithon/MHBoxesView.m"
-         timestampString = "381529162.834155"
+         timestampString = "381530974.034813"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
-         landmarkName = "-drawRect:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MHackberrithon/MHBoxesView.m"
-         timestampString = "381529120.326085"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
          landmarkName = "-setBoxesWithBoxes:imageSize:wordsConfidences:"
          landmarkType = "5">
       </FileBreakpoint>

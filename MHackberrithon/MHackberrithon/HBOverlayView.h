@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MHFreezeCameraButton.h"
 #import "MHBoxesView.h"
+#import "MHWordLabel.h"
 
 @class HBOverlayView;
 
@@ -26,5 +27,6 @@
 @property (retain) UIImageView *staticImageView;
 @property (retain) MHFreezeCameraButton *freezeButton;
 @property (retain) MHBoxesView *boxesLayer;
+@property (retain) MHWordLabel *wordLabel;
 
 @end

@@ -10,13 +10,13 @@
 #import "ScanButton.h"
 #import "MHCameraMaskView.h"
 
-
 @implementation HBOverlayView
 
 @synthesize delegate;
 @synthesize staticImageView;
 @synthesize freezeButton;
 @synthesize boxesLayer;
+@synthesize wordLabel;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -40,11 +40,14 @@
         [self addSubview:freezeButton];
         [self bringSubviewToFront:freezeButton];
         
-        
+        wordLabel = [[MHWordLabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height *1.0/3)];
+        wordLabel.text = @"test";
+        [self addSubview:wordLabel];
+        [self bringSubviewToFront:wordLabel];
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        
         [self addGestureRecognizer:tapGesture];
+        
         MHCameraMaskView *mask = [[MHCameraMaskView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         [self addSubview:mask];
         [self rearrangeSubviews];
@@ -94,8 +97,7 @@
 
 - (void) tap: (UIGestureRecognizer *) tapGesture {
     CGPoint location = [tapGesture locationInView:self.superview];
-    NSLog(@"%f", location.x);
-    
+    self.wordLabel.text = [NSString stringWithFormat:@"%f, %f", location.x, location.y];
 }
 
 @end

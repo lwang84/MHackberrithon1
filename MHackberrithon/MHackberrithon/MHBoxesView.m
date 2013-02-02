@@ -16,6 +16,7 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         // Initialization code
+
     }
     return self;
 }
@@ -57,6 +58,5 @@
                       box.size.width/self.imageSize.width * self.frame.size.width,
                       box.size.height/self.imageSize.height * self.frame.size.height);
 }
-
 
 @end
