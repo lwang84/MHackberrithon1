@@ -7,7 +7,6 @@
 //
 
 #import "MHViewController.h"
-#import "MHSmileyFace.h"
 #import "Tesseract.h"
 #import "MHImageEditorViewController.h"
 
@@ -83,10 +82,17 @@
     
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     
-    
     CGImageRef imageRef = CGImageCreateWithImageInRect([self.image CGImage], CGRectMake(0, self.image.size.height*1.0/3, self.image.size.width, self.image.size.height*1.0/3));
     
-    UIImage *nImage = [[UIImage alloc] initWithCGImage:imageRef scale:1 orientation:UIImageOrientationUp];
+    //CGImageRef imageRef = CGImageCreateWithImageInRect([self.image CGImage], CGRectMake(self.image.size.width*1.0/3, 0, self.image.size.width*1.0/3, self.image.size.height));
+    
+    UIImage *nImage = [[UIImage alloc] initWithCGImage:imageRef ];// scale:1 orientation:self.image.imageOrientation];
+    
+    
+    CGContextRef bitmap;
+    
+    
+    //UIImage *nImage = [[UIImage alloc] initWithCGImage:imageRef];
     CGImageRelease(imageRef);
 
     CGSize size = [nImage size];

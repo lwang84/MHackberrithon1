@@ -10,6 +10,7 @@
 #import "Tesseract.h"
 
 #import "baseapi.h"
+#import "allheaders.h"
 #import "environ.h"
 #import "pix.h"
 
@@ -167,6 +168,11 @@ namespace tesseract {
 	// We're done with the context and color space
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
+    
+    //LEPT_DLL extern PIX * pixRotateAM ( PIX *pixs, l_float32 angle, l_int32 incolor );
+    //_pixels = (uint32_t*)pixRotateAM((PIX*)_pixels, (l_float32)(-3.1415926/2), (l_int32)0xffffff);
+
+    //_pixels = pixRotateAM(_pixels,3.141592653589/2,L_BRING_IN_WHITE);
     
     _tesseract->SetImage((const unsigned char *) _pixels, width, height, sizeof(uint32_t), width * sizeof(uint32_t));
 }
