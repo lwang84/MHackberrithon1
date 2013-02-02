@@ -10,8 +10,6 @@
 #import <UIKit/UIKit.h>
 
 
-
-
 @interface MHViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property UIImagePickerController *picker;

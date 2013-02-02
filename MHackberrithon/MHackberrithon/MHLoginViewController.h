@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MHAppDelegate.h"
 
 @interface MHLoginViewController : UIViewController
+- (IBAction)performLogin:(id)sender;
+- (void)loginFailed;
+
 
 @end

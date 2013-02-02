@@ -1,34 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gXM-Az-q2d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dlO-1m-dKO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="WeA-4a-kNb">
+        <!--Login View Controller-->
+        <scene sceneID="CBu-ib-hK2">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="gXM-Az-q2d" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="saD-vm-xs7">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="dlO-1m-dKO" kind="relationship" relationship="viewControllers" id="4GF-st-Ure"/>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="Cyr-lH-tWg"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MSn-q1-nQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="" id="huR-Gb-66b" customClass="MHLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PDq-0N-od1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co4-Hg-GWr">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performLogin:" destination="huR-Gb-66b" eventType="touchUpInside" id="q5B-4e-Vbr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="co4-Hg-GWr" secondAttribute="bottom" constant="173" id="e4b-dl-2nq"/>
+                            <constraint firstItem="co4-Hg-GWr" firstAttribute="centerX" secondItem="PDq-0N-od1" secondAttribute="centerX" type="default" id="hnV-g6-4jx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27v-VV-wts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1071" y="-556"/>
+            <point key="canvasLocation" x="-1360" y="-1086"/>
         </scene>
         <!--View Controller - OCR-->
         <scene sceneID="1zV-FC-Nab">
             <objects>
                 <viewController id="dlO-1m-dKO" customClass="MHViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhI-gk-ldF">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -50,34 +64,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4h-aP-aMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="-442"/>
-        </scene>
-        <!--Image Picker Controller - Camera-->
-        <scene sceneID="5">
-            <objects>
-                <viewController id="2" customClass="MHImagePickerController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Camera" id="qoB-Nt-wPS"/>
-                    <navigationItem key="navigationItem" id="iH6-uU-JuK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-522" y="-264"/>
+            <point key="canvasLocation" x="9" y="-608"/>
         </scene>
     </scenes>
     <classes>
-        <class className="MHImagePickerController" superclassName="UIImagePickerController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MHImagePickerController.h"/>
+        <class className="MHLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MHLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="performLogin:"/>
+            </relationships>
         </class>
         <class className="MHViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MHViewController.h"/>
         </class>
-        <class className="OverlayViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OverlayViewController.h"/>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

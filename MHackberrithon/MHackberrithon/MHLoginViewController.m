@@ -35,4 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)performLogin:(id)sender {
+    MHAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate openSession];
+}
+
+- (void)loginFailed
+{
+    // User switched back to the app without authorizing. Stay here, but
+    // stop the spinner.
+    //[self.spinner stopAnimating];
+}
+
 @end

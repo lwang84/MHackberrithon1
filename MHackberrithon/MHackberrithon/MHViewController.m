@@ -18,7 +18,6 @@
 
 @implementation MHViewController
 
-
 @synthesize picker;
 
 - (void)viewDidLoad
@@ -37,8 +36,6 @@
 
 - (void) buttonTapped: (UIButton *)capture
 {
-    
-    
     HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 300,300)];
 	
 	// Create a new image picker instance:
@@ -79,6 +76,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    
     NSLog(@"picture taken");
     
     UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
