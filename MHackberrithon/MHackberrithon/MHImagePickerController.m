@@ -28,7 +28,6 @@
 {
     [super viewDidLoad];
     
-    
     OverlayView *overlay = [[OverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-200, SCREEN_HEIGTH-200)];
 	
 	// Create a new image picker instance:

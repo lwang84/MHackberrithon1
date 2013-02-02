@@ -21,7 +21,6 @@
     [super viewDidLoad];
     
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
     [tesseract setImage:[UIImage imageNamed:@"sample1.jpg"]];
     [tesseract recognize];
     
@@ -34,5 +33,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
