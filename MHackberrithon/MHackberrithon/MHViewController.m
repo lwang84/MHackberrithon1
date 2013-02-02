@@ -79,35 +79,45 @@
 
     
     self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-//    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-//    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
-//    
-//    CGSize size = [image size];
-//    [tesseract setImage:image];
-//    //[tesseract recognize];
-//    
-//    [tesseract getWordBoxes];
-//    int n = [tesseract getBoxesCount];
-//    
-//    for (int i = 0; i < n; i++) {
-//        NSLog(@"%d", [tesseract getBoxes:i]);
-//    }
-//    
-//    NSLog(@"box count = %d", n);
-//    //NSLog(@"%@", [tesseract recognizedText]);
-
-    UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:image];
+    NSLog(@"%f,%f", self.image.size.width, self.image.size.height);
     
-    MHImageEditorViewController *imageEditor = [[MHImageEditorViewController alloc] initWithNibName:@"MHImageEditorViewController" bundle:nil];
-    imageEditor.image = self.image;
+    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     
-    UIViewController *modalViewController = [self modalViewController];
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([self.image CGImage], CGRectMake(0, self.image.size.height*1.0/3, self.image.size.width, self.image.size.height*1.0/3));
+    
+    UIImage *nImage = [[UIImage alloc] initWithCGImage:imageRef scale:1 orientation:UIImageOrientationUp];
+    CGImageRelease(imageRef);
 
-    if ([modalViewController isKindOfClass:[UIImagePickerController class]]) {
-        [self dismissModalViewControllerAnimated:NO];
+    CGSize size = [nImage size];
+    [tesseract setImage:nImage];
+    //[tesseract recognize];
+    
+    [tesseract getWordBoxes];
+    
+    //(HBOverlayView *)(self.picker.cameraOverlayView).boxe
+    
+    int n = [tesseract getBoxesCount];
+    
+    for (int i = 0; i < n; i++) {
+        CGRect box =  [tesseract getBoxes:i];
     }
-    [self presentModalViewController:imageEditor animated:NO];
+    
+    NSLog(@"box count = %d", n);
+    NSLog(@"%@", [tesseract recognizedText]);
+
+    //UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:self.image];
+    
+//    MHImageEditorViewController *imageEditor = [[MHImageEditorViewController alloc] initWithNibName:@"MHImageEditorViewController" bundle:nil];
+//    imageEditor.image = self.image;
+//    
+//    UIViewController *modalViewController = [self modalViewController];
+//
+//    if ([modalViewController isKindOfClass:[UIImagePickerController class]]) {
+//        [self dismissModalViewControllerAnimated:NO];
+//    }
+//    [self presentModalViewController:imageEditor animated:NO];
 }
 
 - (void) needTakePicture: (HBOverlayView *)overlay

@@ -16,6 +16,8 @@
 
 @synthesize delegate;
 @synthesize staticImageView;
+@synthesize freezeButton;
+@synthesize boxesLayer;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -32,21 +34,23 @@
 		[self addSubview:scanButton];
         
         
-        UIButton *capture = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 50)];
-        [capture setTitle:@"aaa" forState:UIControlStateNormal];
-        [capture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height*1.0/3, self.frame.size.width, self.frame.size.height*1.0/3)];
+        [self addSubview:boxesLayer];
+        [self bringSubviewToFront:boxesLayer];
         
-        [capture addTarget:self action:@selector(captureTapped:) forControlEvents:UIControlEventTouchUpInside];
+        freezeButton = [[MHFreezeCameraButton alloc] initWithFrame:CGRectMake(self.frame.size.width*2.0/5, self.frame.size.height*5.0/6, self.frame.size.width*1.0/5, self.frame.size.height*1.0/12)];
+        [freezeButton addTarget:self action:@selector(captureTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:freezeButton];
+        [self bringSubviewToFront:freezeButton];
         
         
-        [self addSubview:capture];
-        [self bringSubviewToFront:capture];
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
         
         [self addGestureRecognizer:tapGesture];
         MHCameraMaskView *mask = [[MHCameraMaskView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         [self addSubview:mask];
+        [self rearrangeSubviews];
         
     }
     return self;
@@ -58,17 +62,23 @@
     staticImageView.frame = CGRectMake(0, 0, self.superview.frame.size.width, self.superview.frame.size.height);
     [self addSubview:staticImageView];
     
+    [self rearrangeSubviews];
+}
+
+- (void) rearrangeSubviews {
+    
     NSArray * subs = self.subviews;
     for(int i = 0; i < subs.count; i++)
     {
-        if([subs objectAtIndex:i] != staticImageView)
+        if([subs objectAtIndex:i] != nil && [subs objectAtIndex:i] != staticImageView)
         {
             [self bringSubviewToFront:(UIView *)([subs objectAtIndex:i])];
         }
-            
+        
     }
+    [self bringSubviewToFront:boxesLayer];
+    [self bringSubviewToFront:freezeButton];
     
-    NSLog(@"static");
 }
 
 - (void) captureTapped: (UIButton *)capture

@@ -37,6 +37,8 @@
 		430AA37B16BD727A0064D0DA /* MHImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA37916BD727A0064D0DA /* MHImageEditorViewController.m */; };
 		430AA37C16BD727A0064D0DA /* MHImageEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA37A16BD727A0064D0DA /* MHImageEditorViewController.xib */; };
 		FC78D47516BD6820005B3CFF /* MHCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */; };
+		FC78D47816BD7441005B3CFF /* MHFreezeCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47716BD7441005B3CFF /* MHFreezeCameraButton.m */; };
+		FC78D47B16BD83B0005B3CFF /* MHBoxesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47A16BD83B0005B3CFF /* MHBoxesView.m */; };
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
@@ -242,6 +244,10 @@
 		430AA37A16BD727A0064D0DA /* MHImageEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHImageEditorViewController.xib; sourceTree = "<group>"; };
 		FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCameraMaskView.h; sourceTree = "<group>"; };
 		FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCameraMaskView.m; sourceTree = "<group>"; };
+		FC78D47616BD7441005B3CFF /* MHFreezeCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFreezeCameraButton.h; sourceTree = "<group>"; };
+		FC78D47716BD7441005B3CFF /* MHFreezeCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFreezeCameraButton.m; sourceTree = "<group>"; };
+		FC78D47916BD83B0005B3CFF /* MHBoxesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHBoxesView.h; sourceTree = "<group>"; };
+		FC78D47A16BD83B0005B3CFF /* MHBoxesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBoxesView.m; sourceTree = "<group>"; };
 		FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImagePickerController.h; sourceTree = "<group>"; };
 		FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImagePickerController.m; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHSmileyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSmileyFace.h; sourceTree = "<group>"; };
@@ -344,6 +350,8 @@
 				FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */,
 				FCCEAAD116BCD40900317762 /* MHSmileyFace.h */,
 				FCCEAAD216BCD40900317762 /* MHSmileyFace.m */,
+				FC78D47916BD83B0005B3CFF /* MHBoxesView.h */,
+				FC78D47A16BD83B0005B3CFF /* MHBoxesView.m */,
 				FCCEAAE916BCE4FA00317762 /* HBOverlayView.h */,
 				FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */,
 				FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */,
@@ -355,6 +363,8 @@
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
 				430AA35916BD2B510064D0DA /* MHViewController.xib */,
 				430AA36316BD2D090064D0DA /* MHLoginViewController.xib */,
+				FC78D47616BD7441005B3CFF /* MHFreezeCameraButton.h */,
+				FC78D47716BD7441005B3CFF /* MHFreezeCameraButton.m */,
 			);
 			path = MHackberrithon;
 			sourceTree = "<group>";
@@ -716,6 +726,8 @@
 				430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */,
 				FC78D47516BD6820005B3CFF /* MHCameraMaskView.m in Sources */,
 				430AA37B16BD727A0064D0DA /* MHImageEditorViewController.m in Sources */,
+				FC78D47816BD7441005B3CFF /* MHFreezeCameraButton.m in Sources */,
+				FC78D47B16BD83B0005B3CFF /* MHBoxesView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
