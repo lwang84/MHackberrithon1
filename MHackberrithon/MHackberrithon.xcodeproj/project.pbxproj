@@ -27,6 +27,11 @@
 		430AA32316BCEE450064D0DA /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA32116BCEE450064D0DA /* liblept.a */; };
 		430AA32416BCEE450064D0DA /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA32216BCEE450064D0DA /* libtesseract_all.a */; };
 		430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = 430AA32716BCEE500064D0DA /* Tesseract.mm */; };
+		430AA33616BCFD900064D0DA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33516BCFD900064D0DA /* FacebookSDK.framework */; };
+		430AA33916BCFDF60064D0DA /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 430AA33816BCFDF60064D0DA /* FacebookSDKResources.bundle */; };
+		430AA33D16BCFE730064D0DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33A16BCFE730064D0DA /* Accounts.framework */; };
+		430AA33E16BCFE730064D0DA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33B16BCFE730064D0DA /* AdSupport.framework */; };
+		430AA33F16BCFE730064D0DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33C16BCFE730064D0DA /* Social.framework */; };
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHOverlayView.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
@@ -221,6 +226,11 @@
 		430AA32216BCEE450064D0DA /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract_all.a; sourceTree = "<group>"; };
 		430AA32616BCEE500064D0DA /* Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
 		430AA32716BCEE500064D0DA /* Tesseract.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tesseract.mm; sourceTree = "<group>"; };
+		430AA33516BCFD900064D0DA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		430AA33816BCFDF60064D0DA /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		430AA33A16BCFE730064D0DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		430AA33B16BCFE730064D0DA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		430AA33C16BCFE730064D0DA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImagePickerController.h; sourceTree = "<group>"; };
 		FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImagePickerController.m; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHOverlayView.h; sourceTree = "<group>"; };
@@ -243,12 +253,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430AA33D16BCFE730064D0DA /* Accounts.framework in Frameworks */,
+				430AA33E16BCFE730064D0DA /* AdSupport.framework in Frameworks */,
+				430AA33F16BCFE730064D0DA /* Social.framework in Frameworks */,
 				FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */,
 				430AA19816BCCEE10064D0DA /* UIKit.framework in Frameworks */,
 				430AA19A16BCCEE10064D0DA /* Foundation.framework in Frameworks */,
 				430AA19C16BCCEE10064D0DA /* CoreGraphics.framework in Frameworks */,
 				430AA32316BCEE450064D0DA /* liblept.a in Frameworks */,
 				430AA32416BCEE450064D0DA /* libtesseract_all.a in Frameworks */,
+				430AA33616BCFD900064D0DA /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +307,11 @@
 		430AA19616BCCEE10064D0DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				430AA33A16BCFE730064D0DA /* Accounts.framework */,
+				430AA33B16BCFE730064D0DA /* AdSupport.framework */,
+				430AA33C16BCFE730064D0DA /* Social.framework */,
+				430AA33816BCFDF60064D0DA /* FacebookSDKResources.bundle */,
+				430AA33516BCFD900064D0DA /* FacebookSDK.framework */,
 				430AA19716BCCEE10064D0DA /* UIKit.framework */,
 				430AA19916BCCEE10064D0DA /* Foundation.framework */,
 				430AA19B16BCCEE10064D0DA /* CoreGraphics.framework */,
@@ -634,6 +653,7 @@
 				FCCEAAF516BCE53D00317762 /* scanbutton.png in Resources */,
 				FCCEAAF816BCECA600317762 /* eng.traineddata in Resources */,
 				FCCEAAF916BCECA600317762 /* sample1.jpg in Resources */,
+				430AA33916BCFDF60064D0DA /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +801,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MHackberrithon/MHackberrithon-Prefix.pch";
 				INFOPLIST_FILE = "MHackberrithon/MHackberrithon-Info.plist";
@@ -789,6 +813,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -798,6 +823,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MHackberrithon/MHackberrithon-Prefix.pch";
 				INFOPLIST_FILE = "MHackberrithon/MHackberrithon-Info.plist";
@@ -806,6 +835,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
