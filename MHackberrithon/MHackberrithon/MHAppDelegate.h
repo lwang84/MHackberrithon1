@@ -12,7 +12,8 @@
 #import "MHViewController.h"
 
 @interface MHAppDelegate : UIResponder <UIApplicationDelegate>
-
+@property (strong, nonatomic) UINavigationController* navController;
+@property (strong, nonatomic) MHViewController *mainViewController;
 @property (strong, nonatomic) UIWindow *window;
 - (void)openSession;
 

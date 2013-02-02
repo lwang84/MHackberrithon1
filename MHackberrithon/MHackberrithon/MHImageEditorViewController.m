@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.imageView setImage:self.image];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setImageView:nil];
+    [super viewDidUnload];
+}
 @end

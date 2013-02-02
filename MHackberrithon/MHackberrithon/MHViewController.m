@@ -9,12 +9,12 @@
 #import "MHViewController.h"
 #import "MHSmileyFace.h"
 #import "Tesseract.h"
-
+#import "MHImageEditorViewController.h"
 
 @interface MHViewController ()
 
 @property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
-
+@property UIImage* image;
 @end
 
 @implementation MHViewController
@@ -33,16 +33,13 @@
     
     
     [self.view addSubview:capture];
+    
 }
 
 - (void) buttonTapped: (UIButton *)capture
 {
-<<<<<<< HEAD
     HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 320,480)];
-=======
-    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 300,300)];
     overlay.delegate = self;
->>>>>>> 9730e99e89a822241b9ca4c344e1349ee0f31e17
 	
 	// Create a new image picker instance:
 	picker = [[UIImagePickerController alloc] init];
@@ -80,27 +77,38 @@
     
     NSLog(@"picture taken");
     
-    UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+    self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+//    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+//    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+//    
+//    CGSize size = [image size];
+//    [tesseract setImage:image];
+//    //[tesseract recognize];
+//    
+//    [tesseract getWordBoxes];
+//    int n = [tesseract getBoxesCount];
+//    
+//    for (int i = 0; i < n; i++) {
+//        NSLog(@"%d", [tesseract getBoxes:i]);
+//    }
+//    
+//    NSLog(@"box count = %d", n);
+//    //NSLog(@"%@", [tesseract recognizedText]);
     
-    CGSize size = [image size];
-    [tesseract setImage:image];
-    //[tesseract recognize];
+    MHImageEditorViewController *imageEditor = [[MHImageEditorViewController alloc] initWithNibName:@"MHImageEditorViewController" bundle:nil];
+    imageEditor.image = self.image;
     
-    [tesseract getWordBoxes];
-    int n = [tesseract getBoxesCount];
-    
-    for (int i = 0; i < n; i++) {
-        NSLog(@"%d", [tesseract getBoxes:i]);
+    UIViewController *modalViewController = [self modalViewController];
+
+    if ([modalViewController isKindOfClass:[UIImagePickerController class]]) {
+        [self dismissModalViewControllerAnimated:NO];
     }
-    
-    NSLog(@"box count = %d", n);
-    //NSLog(@"%@", [tesseract recognizedText]);
+    [self presentModalViewController:imageEditor animated:NO];
 }
 
 - (void) needTakePicture: (HBOverlayView *)overlay
 {
+    
     [picker takePicture];
 }
 - (void)didReceiveMemoryWarning
@@ -108,5 +116,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

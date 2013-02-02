@@ -32,8 +32,10 @@
 		430AA33E16BCFE730064D0DA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33B16BCFE730064D0DA /* AdSupport.framework */; };
 		430AA33F16BCFE730064D0DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33C16BCFE730064D0DA /* Social.framework */; };
 		430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA34516BD01EF0064D0DA /* MHLoginViewController.m */; };
-		430AA35A16BD2B510064D0DA /* MHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA35916BD2B510064D0DA /* MHViewController.xib */; };
 		430AA36416BD2D090064D0DA /* MHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA36316BD2D090064D0DA /* MHLoginViewController.xib */; };
+		430AA36E16BD5E000064D0DA /* MHImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA36C16BD5DFF0064D0DA /* MHImageEditorViewController.m */; };
+		430AA37116BD65420064D0DA /* MHImageEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA37016BD65420064D0DA /* MHImageEditorViewController.xib */; };
+		430AA37316BD6BEE0064D0DA /* MHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA37216BD6BEE0064D0DA /* MHViewController.xib */; };
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
@@ -232,8 +234,11 @@
 		430AA33C16BCFE730064D0DA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		430AA34416BD01EF0064D0DA /* MHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHLoginViewController.h; sourceTree = "<group>"; };
 		430AA34516BD01EF0064D0DA /* MHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHLoginViewController.m; sourceTree = "<group>"; };
-		430AA35916BD2B510064D0DA /* MHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHViewController.xib; sourceTree = "<group>"; };
 		430AA36316BD2D090064D0DA /* MHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHLoginViewController.xib; sourceTree = "<group>"; };
+		430AA36B16BD5DFE0064D0DA /* MHImageEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImageEditorViewController.h; sourceTree = "<group>"; };
+		430AA36C16BD5DFF0064D0DA /* MHImageEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImageEditorViewController.m; sourceTree = "<group>"; };
+		430AA37016BD65420064D0DA /* MHImageEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHImageEditorViewController.xib; sourceTree = "<group>"; };
+		430AA37216BD6BEE0064D0DA /* MHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHViewController.xib; sourceTree = "<group>"; };
 		FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImagePickerController.h; sourceTree = "<group>"; };
 		FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImagePickerController.m; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHSmileyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSmileyFace.h; sourceTree = "<group>"; };
@@ -340,8 +345,11 @@
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
 				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
-				430AA35916BD2B510064D0DA /* MHViewController.xib */,
 				430AA36316BD2D090064D0DA /* MHLoginViewController.xib */,
+				430AA36B16BD5DFE0064D0DA /* MHImageEditorViewController.h */,
+				430AA36C16BD5DFF0064D0DA /* MHImageEditorViewController.m */,
+				430AA37016BD65420064D0DA /* MHImageEditorViewController.xib */,
+				430AA37216BD6BEE0064D0DA /* MHViewController.xib */,
 			);
 			path = MHackberrithon;
 			sourceTree = "<group>";
@@ -655,8 +663,9 @@
 				FCCEAAF816BCECA600317762 /* eng.traineddata in Resources */,
 				FCCEAAF916BCECA600317762 /* sample1.jpg in Resources */,
 				430AA33916BCFDF60064D0DA /* FacebookSDKResources.bundle in Resources */,
-				430AA35A16BD2B510064D0DA /* MHViewController.xib in Resources */,
 				430AA36416BD2D090064D0DA /* MHLoginViewController.xib in Resources */,
+				430AA37116BD65420064D0DA /* MHImageEditorViewController.xib in Resources */,
+				430AA37316BD6BEE0064D0DA /* MHViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +709,7 @@
 				430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */,
 				FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */,
 				430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */,
+				430AA36E16BD5E000064D0DA /* MHImageEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

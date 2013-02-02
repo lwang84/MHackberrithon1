@@ -10,8 +10,7 @@
 
 @interface MHAppDelegate ()
 
-@property (strong, nonatomic) UINavigationController* navController;
-@property (strong, nonatomic) MHViewController *mainViewController;
+
 
 
 @end
