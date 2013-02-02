@@ -80,6 +80,24 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     NSLog(@"picture taken");
+    
+    UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+    
+    CGSize size = [image size];
+    [tesseract setImage:image];
+    //[tesseract recognize];
+    
+    [tesseract getWordBoxes];
+    int n = [tesseract getBoxesCount];
+    
+    for (int i = 0; i < n; i++) {
+        NSLog(@"%d", [tesseract getBoxes:i]);
+    }
+    
+    NSLog(@"box count = %d", n);
+    //NSLog(@"%@", [tesseract recognizedText]);
 }
 
 - (void)didReceiveMemoryWarning

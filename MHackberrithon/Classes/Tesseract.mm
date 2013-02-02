@@ -20,6 +20,7 @@ namespace tesseract {
 @interface Tesseract () {
     tesseract::TessBaseAPI* _tesseract;
     uint32_t* _pixels;
+    Boxa* _boxa;
 }
 
 @end
@@ -116,6 +117,26 @@ namespace tesseract {
     return [NSString stringWithUTF8String:utf8Text];
 }
 
+- (float)getTextDirection {
+    bool flag;
+	int out_offset;
+	float out_slope;
+	flag = _tesseract->GetTextDirection(&out_offset, &out_slope);
+    return out_slope;
+}
+
+- (void) getWordBoxes {
+    _boxa = _tesseract->GetWords(NULL);
+}
+
+- (int) getBoxesCount {
+    return _boxa->n;
+}
+
+- (int) getBoxes:(int) i{
+    Box** boxes = _boxa->box;
+    return boxes[i]->w;
+}
 - (void)setImage:(UIImage *)image
 {
     free(_pixels);
