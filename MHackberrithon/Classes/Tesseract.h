@@ -23,5 +23,8 @@
 - (BOOL)setLanguage:(NSString *)language;
 - (BOOL)recognize;
 - (NSString *)recognizedText;
+- (void) getWordBoxes;
+- (int) getBoxesCount;
+- (int) getBoxes:(int) i;
 
 @end
