@@ -38,7 +38,7 @@
 
 - (void) buttonTapped: (UIButton *)capture
 {
-    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 300,300)];
+    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 320,480)];
 	
 	// Create a new image picker instance:
 	picker = [[UIImagePickerController alloc] init];
