@@ -16,14 +16,16 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         // Initialization code
+
     }
     return self;
 }
 
-- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size
+- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences
 {
     self.boxes = boxes;
     self.imageSize = size;
+    self.confidences = confidences;
     [self setNeedsDisplay];
 }
 
@@ -41,9 +43,10 @@
     // Drawing code
     for (int i = 0; i < [self.boxes count]; i++) {
         CGRect box =  [(NSValue *)[self.boxes objectAtIndex:i] CGRectValue];
-        
-        CGContextStrokeRect(context, [self scaleBox:box]);
-        CGContextStrokePath(context);
+        if ([[self.confidences objectAtIndex:i] integerValue]>80){
+            CGContextStrokeRect(context, [self scaleBox:box]);
+            CGContextStrokePath(context);
+        }
     }
     
     
@@ -55,6 +58,5 @@
                       box.size.width/self.imageSize.width * self.frame.size.width,
                       box.size.height/self.imageSize.height * self.frame.size.height);
 }
-
 
 @end

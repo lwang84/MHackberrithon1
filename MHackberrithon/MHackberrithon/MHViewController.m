@@ -97,10 +97,15 @@
 
     CGSize size = [nImage size];
     [tesseract setImage:nImage];
+<<<<<<< HEAD
     //[tesseract recognize];
     NSLog(@"start");
     [tesseract recognizeByWord];
     NSLog(@"end");
+=======
+    [tesseract recognize];
+    
+>>>>>>> 4f7fb2bb4da3120faf3d011d7d602d87b6d123af
     [tesseract getWordBoxes];
     [tesseract getBlockBoxes];
     
@@ -108,13 +113,16 @@
     //int n = [tesseract getBlockCount];
     
     NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
+    NSMutableArray *confidences = [[NSMutableArray alloc] initWithCapacity:n];
     for (int i = 0; i < n; i++) {
         CGRect box =  [tesseract getBoxes:i];
         //CGRect box =  [tesseract getBoxes:i];
         [boxes addObject:[NSValue valueWithCGRect:box]];
+        int confidence = [tesseract getWordConfidenceAt:i];
+        [confidences addObject:[NSNumber numberWithInt:confidence]];
     }
     
-    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size];
+    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences];
     //[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer].boxes = boxes;
 
     NSLog(@"box count = %d", n);

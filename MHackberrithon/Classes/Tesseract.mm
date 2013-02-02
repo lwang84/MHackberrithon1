@@ -197,6 +197,7 @@ namespace tesseract {
     Box** boxes = _boxa->box;
     return CGRectMake(1.0*boxes[i]->x, 1.0*boxes[i]->y, 1.0*boxes[i]->w, 1.0*boxes[i]->h);
 }
+
 - (void)setImage:(UIImage *)image
 {
     free(_pixels);
@@ -233,6 +234,11 @@ namespace tesseract {
     //_pixels = pixRotateAM(_pixels,3.141592653589/2,L_BRING_IN_WHITE);
     
     _tesseract->SetImage((const unsigned char *) _pixels, width, height, sizeof(uint32_t), width * sizeof(uint32_t));
+}
+
+- (int) getWordConfidenceAt: (int) i{
+    int *confidence = _tesseract->AllWordConfidences();
+    return confidence[i];
 }
 
 @end
