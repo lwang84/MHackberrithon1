@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)performLogin:(id)sender {
+    
+    [self.mainTabController openSession];
+}
 @end

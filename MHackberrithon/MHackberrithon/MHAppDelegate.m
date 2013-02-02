@@ -10,14 +10,14 @@
 
 @interface MHAppDelegate ()
 
-@property (strong, nonatomic) UINavigationController* navController;
+@property (strong, nonatomic) UITabBarController* navController;
 
 @end
 
 @implementation MHAppDelegate
 
 @synthesize navController = _navController;
-@synthesize mainViewController = _mainViewController;
+//@synthesize mainViewController = _mainViewController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -27,6 +27,15 @@
     [self copyTessDataFile];
 
     return YES;
+}
+
+- (void)showLoginView
+{
+    UIViewController *topViewController = self.navController;
+    
+    MHLoginViewController* loginViewController =
+    [[MHLoginViewController alloc]initWithNibName:@"MHLoginViewController" bundle:nil];
+    [topViewController presentModalViewController:loginViewController animated:NO];
 }
 
 - (void) copyTessDataFile {

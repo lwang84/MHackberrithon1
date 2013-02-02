@@ -32,6 +32,7 @@
 		430AA33E16BCFE730064D0DA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33B16BCFE730064D0DA /* AdSupport.framework */; };
 		430AA33F16BCFE730064D0DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430AA33C16BCFE730064D0DA /* Social.framework */; };
 		430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA34516BD01EF0064D0DA /* MHLoginViewController.m */; };
+		430AA35516BD0DC90064D0DA /* MHMainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA35416BD0DC90064D0DA /* MHMainTabController.m */; };
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
@@ -230,6 +231,8 @@
 		430AA33C16BCFE730064D0DA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		430AA34416BD01EF0064D0DA /* MHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHLoginViewController.h; sourceTree = "<group>"; };
 		430AA34516BD01EF0064D0DA /* MHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHLoginViewController.m; sourceTree = "<group>"; };
+		430AA35316BD0DC90064D0DA /* MHMainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHMainTabController.h; sourceTree = "<group>"; };
+		430AA35416BD0DC90064D0DA /* MHMainTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMainTabController.m; sourceTree = "<group>"; };
 		FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImagePickerController.h; sourceTree = "<group>"; };
 		FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImagePickerController.m; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHSmileyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSmileyFace.h; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
 				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
+				430AA35316BD0DC90064D0DA /* MHMainTabController.h */,
+				430AA35416BD0DC90064D0DA /* MHMainTabController.m */,
 			);
 			path = MHackberrithon;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */,
 				FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */,
 				430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */,
+				430AA35516BD0DC90064D0DA /* MHMainTabController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
