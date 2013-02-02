@@ -8,9 +8,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HBOverlayView.h"
 
 
-@interface MHViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface MHViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, MHOverlayViewDelegate>
 
 @property UIImagePickerController *picker;
 
