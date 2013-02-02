@@ -10,7 +10,6 @@
 #import "MHSmileyFace.h"
 #import "Tesseract.h"
 
-#import "HBOverlayView.h"
 
 @interface MHViewController ()
 
@@ -38,7 +37,12 @@
 
 - (void) buttonTapped: (UIButton *)capture
 {
+<<<<<<< HEAD
     HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 320,480)];
+=======
+    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, 300,300)];
+    overlay.delegate = self;
+>>>>>>> 9730e99e89a822241b9ca4c344e1349ee0f31e17
 	
 	// Create a new image picker instance:
 	picker = [[UIImagePickerController alloc] init];
@@ -60,15 +64,10 @@
 	
 	// Show the picker:
 	[self presentModalViewController:picker animated:YES];
-    [self performSelector:@selector(showTime) withObject:nil afterDelay:3.0];
+    //[self performSelector:@selector(showTime) withObject:nil afterDelay:3.0];
     
 }
 
-- (void) showTime{
-    NSLog(@"time up");
-    
-    [picker takePicture];
-}
 
 - (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker
 {
@@ -100,6 +99,10 @@
     //NSLog(@"%@", [tesseract recognizedText]);
 }
 
+- (void) needTakePicture: (HBOverlayView *)overlay
+{
+    [picker takePicture];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
