@@ -8,7 +8,6 @@
 
 #import "HBOverlayView.h"
 #import "ScanButton.h"
-#import "MHSmileyFace.h"
 #import "MHCameraMaskView.h"
 
 
@@ -24,8 +23,6 @@
 		// Clear the background of the overlay:
 		self.opaque = NO;
 		self.backgroundColor = [UIColor clearColor];
-        MHSmileyFace *smiley = [[MHSmileyFace alloc] initWithFrame:CGRectMake(30, 100, 260, 200)];        
-		[self addSubview:smiley];
 		
 		ScanButton *scanButton = [[ScanButton alloc] initWithFrame:CGRectMake(130, 320, 60, 30)];
 		
