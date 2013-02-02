@@ -7,7 +7,7 @@
 //
 
 #import "MHCameraController.h"
-#import "OverlayView.h"
+#import "HBOverlayView.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 
 
@@ -31,7 +31,7 @@
 
 - (void) viewDidAppear:(BOOL)animated {
 
-    OverlayView *overlay = [[OverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGTH)];
+    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGTH)];
     
     
 	

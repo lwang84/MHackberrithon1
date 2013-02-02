@@ -6,12 +6,12 @@
 //  Copyright 2009 Jason Job. All rights reserved.
 //
 
-#import "OverlayView.h"
+#import "HBOverlayView.h"
 #import "ScanButton.h"
 #import "MHSmileyFace.h"
 
 
-@implementation OverlayView
+@implementation HBOverlayView
 
 @synthesize delegate;
 

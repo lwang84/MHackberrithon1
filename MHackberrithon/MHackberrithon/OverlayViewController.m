@@ -7,14 +7,14 @@
 //
 
 #import "OverlayViewController.h"
-#import "OverlayView.h"
+#import "HBOverlayView.h"
 
 
 @implementation OverlayViewController
 
 
 - (void) viewDidAppear:(BOOL)animated {
-	OverlayView *overlay = [[OverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGTH)];
+	HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGTH)];
 	
 	// Create a new image picker instance:
 	UIImagePickerController *picker = [[UIImagePickerController alloc] init];

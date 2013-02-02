@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    OverlayView *overlay = [[OverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-200, SCREEN_HEIGTH-200)];
+    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-200, SCREEN_HEIGTH-200)];
     overlay.delegate = self;
 	
 	// Create a new image picker instance:
@@ -58,7 +58,7 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void) needTakePicture: (OverlayView *)overlay;
+- (void) needTakePicture: (HBOverlayView *)overlay;
 {
     NSLog(@"SDFSD");
 }

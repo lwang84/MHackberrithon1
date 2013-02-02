@@ -36,7 +36,7 @@
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
-		FCCEAAEF16BCE4FB00317762 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEA16BCE4FB00317762 /* OverlayView.m */; };
+		FCCEAAEF16BCE4FB00317762 /* HBOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */; };
 		FCCEAAF016BCE4FB00317762 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEC16BCE4FB00317762 /* OverlayViewController.m */; };
 		FCCEAAF116BCE4FB00317762 /* ScanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEE16BCE4FB00317762 /* ScanButton.m */; };
 		FCCEAAF416BCE53D00317762 /* overlaygraphic.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEAAF216BCE53D00317762 /* overlaygraphic.png */; };
@@ -239,8 +239,8 @@
 		FCCEAAD116BCD40900317762 /* MHSmileyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSmileyFace.h; sourceTree = "<group>"; };
 		FCCEAAD216BCD40900317762 /* MHSmileyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSmileyFace.m; sourceTree = "<group>"; };
 		FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		FCCEAAE916BCE4FA00317762 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
-		FCCEAAEA16BCE4FB00317762 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		FCCEAAE916BCE4FA00317762 /* HBOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBOverlayView.h; sourceTree = "<group>"; };
+		FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBOverlayView.m; sourceTree = "<group>"; };
 		FCCEAAEB16BCE4FB00317762 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
 		FCCEAAEC16BCE4FB00317762 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
 		FCCEAAED16BCE4FB00317762 /* ScanButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanButton.h; sourceTree = "<group>"; };
@@ -337,8 +337,8 @@
 				FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */,
 				FCCEAAD116BCD40900317762 /* MHSmileyFace.h */,
 				FCCEAAD216BCD40900317762 /* MHSmileyFace.m */,
-				FCCEAAE916BCE4FA00317762 /* OverlayView.h */,
-				FCCEAAEA16BCE4FB00317762 /* OverlayView.m */,
+				FCCEAAE916BCE4FA00317762 /* HBOverlayView.h */,
+				FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */,
 				FCCEAAEB16BCE4FB00317762 /* OverlayViewController.h */,
 				FCCEAAEC16BCE4FB00317762 /* OverlayViewController.m */,
 				FCCEAAED16BCE4FB00317762 /* ScanButton.h */,
@@ -698,7 +698,7 @@
 				430AA1B416BCCEE10064D0DA /* MHViewController.m in Sources */,
 				430AA1D416BCD0490064D0DA /* MHCameraController.m in Sources */,
 				FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */,
-				FCCEAAEF16BCE4FB00317762 /* OverlayView.m in Sources */,
+				FCCEAAEF16BCE4FB00317762 /* HBOverlayView.m in Sources */,
 				FCCEAAF016BCE4FB00317762 /* OverlayViewController.m in Sources */,
 				FCCEAAF116BCE4FB00317762 /* ScanButton.m in Sources */,
 				430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */,

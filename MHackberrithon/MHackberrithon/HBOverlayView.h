@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
-@class OverlayView;
+@class HBOverlayView;
 
 @protocol MHOverlayViewDelegate
-- (void) needTakePicture: (OverlayView *)overlay;
+- (void) needTakePicture: (HBOverlayView *)overlay;
 @end
 
-@interface OverlayView : UIView {
+@interface HBOverlayView : UIView {
 
 }
 

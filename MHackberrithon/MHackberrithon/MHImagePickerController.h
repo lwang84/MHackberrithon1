@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OverlayView.h"
+#import "HBOverlayView.h"
 
 // Transform values for full screen support:
 #define CAMERA_TRANSFORM_X 1
