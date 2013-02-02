@@ -133,9 +133,9 @@ namespace tesseract {
     return _boxa->n;
 }
 
-- (int) getBoxes:(int) i{
+- (CGRect) getBoxes:(int) i{
     Box** boxes = _boxa->box;
-    return boxes[i]->w;
+    return CGRectMake(1.0*boxes[i]->x, 1.0*boxes[i]->y, 1.0*boxes[i]->w, 1.0*boxes[i]->h);
 }
 - (void)setImage:(UIImage *)image
 {

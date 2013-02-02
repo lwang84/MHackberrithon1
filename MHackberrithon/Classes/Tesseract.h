@@ -25,6 +25,6 @@
 - (NSString *)recognizedText;
 - (void) getWordBoxes;
 - (int) getBoxesCount;
-- (int) getBoxes:(int) i;
+- (CGRect) getBoxes:(int) i;
 
 @end

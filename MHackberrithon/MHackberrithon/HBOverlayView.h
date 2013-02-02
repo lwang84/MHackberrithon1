@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MHFreezeCameraButton.h"
+#import "MHBoxesView.h"
 
 @class HBOverlayView;
 
@@ -23,6 +24,6 @@
 - (void) setStaticImage: (UIImage *) image;
 @property (assign) id <MHOverlayViewDelegate> delegate;
 @property (retain) UIImageView *staticImageView;
-
-
+@property (retain) MHFreezeCameraButton *freezeButton;
+@property (retain) MHBoxesView *boxesLayer;
 @end
