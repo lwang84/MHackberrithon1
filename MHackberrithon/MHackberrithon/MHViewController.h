@@ -12,6 +12,8 @@
 
 
 
-@interface MHViewController : UIViewController
+@interface MHViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@property UIImagePickerController *picker;
 
 @end
