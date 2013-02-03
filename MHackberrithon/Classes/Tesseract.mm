@@ -13,6 +13,7 @@
 #import "allheaders.h"
 #import "environ.h"
 #import "pix.h"
+#import "MHData.h"
 
 namespace tesseract {
     class TessBaseAPI;
@@ -116,18 +117,25 @@ namespace tesseract {
     return (returnCode == 0) ? YES : NO;
 }
 
--(BOOL) recognizeByWord{
+-(NSMutableArray *) recognizeByWord{
     _tesseract->Recognize(0);
     tesseract::ResultIterator* ri = _tesseract->GetIterator();
     tesseract::ChoiceIterator* ci;
+    
+    NSMutableArray *dataArray = [[NSMutableArray alloc] initWithCapacity:5];
     
     if(ri != 0)
     {
         do
         {
             const char* symbol = ri->GetUTF8Text(tesseract::RIL_TEXTLINE);
-            float confidence = ri->Confidence(tesseract::RIL_TEXTLINE);
             NSLog([NSString stringWithUTF8String:symbol]);
+            float confidence = ri->Confidence(tesseract::RIL_TEXTLINE);
+            int left, top, right, bottom;
+            ri->BoundingBox(tesseract::RIL_TEXTLINE, &left, &top, &right, &bottom);
+            MHData *data = [[MHData alloc] initWithConfidence:confidence word:symbol left:left right:right top:top bottom:bottom];
+            
+            [dataArray addObject:data];
             /*
             if(symbol != 0)
             {
@@ -151,7 +159,7 @@ namespace tesseract {
         }
         while((ri->Next(tesseract::RIL_TEXTLINE)));
     }
-    return YES;
+    return dataArray;
 }
 
 - (NSString *)recognizedText {

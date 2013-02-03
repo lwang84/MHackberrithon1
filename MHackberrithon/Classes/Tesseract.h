@@ -32,6 +32,6 @@
 - (void) getBlockBoxes;
 - (int) getBlockCount;
 - (CGRect) getBlock:(int) i;
--(BOOL) recognizeByWord;
+- (NSMutableArray *) recognizeByWord;
 
 @end

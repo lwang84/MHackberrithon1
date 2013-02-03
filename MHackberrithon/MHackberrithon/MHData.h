@@ -10,4 +10,11 @@
 
 @interface MHData : NSObject
 
+@property int top, bottom, right, left;
+@property float confidence;
+@property const char *symbol;
+@property CGRect box;
+
+- (id) initWithConfidence:(float)fi word:(const char*)w left: (int) l right: (int) r top: (int) t bottom: (int) b;
+
 @end
