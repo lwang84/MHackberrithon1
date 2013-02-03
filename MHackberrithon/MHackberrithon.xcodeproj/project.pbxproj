@@ -36,9 +36,10 @@
 		430AA36416BD2D090064D0DA /* MHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA36316BD2D090064D0DA /* MHLoginViewController.xib */; };
 		430AA37B16BD727A0064D0DA /* MHImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA37916BD727A0064D0DA /* MHImageEditorViewController.m */; };
 		430AA37C16BD727A0064D0DA /* MHImageEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430AA37A16BD727A0064D0DA /* MHImageEditorViewController.xib */; };
-		430AA38416BDAEFF0064D0DA /* MHWordLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA38316BDAEFE0064D0DA /* MHWordLabel.m */; };
-		430AA38816BDBF960064D0DA /* MHBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA38716BDBF950064D0DA /* MHBox.m */; };
-		430AA38F16BDD4330064D0DA /* MHData.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA38E16BDD4330064D0DA /* MHData.m */; };
+		FC6B5D7D16BDE5D4003FE5A5 /* MHData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D7C16BDE5D4003FE5A5 /* MHData.m */; };
+		FC6B5D8316BDE606003FE5A5 /* MHRetakeCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */; };
+		FC6B5D8616BDE634003FE5A5 /* MHBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8516BDE634003FE5A5 /* MHBox.m */; };
+		FC6B5D8916BDE657003FE5A5 /* MHWordLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8816BDE657003FE5A5 /* MHWordLabel.m */; };
 		FC78D47516BD6820005B3CFF /* MHCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */; };
 		FC78D47816BD7441005B3CFF /* MHFreezeCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47716BD7441005B3CFF /* MHFreezeCameraButton.m */; };
 		FC78D47B16BD83B0005B3CFF /* MHBoxesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47A16BD83B0005B3CFF /* MHBoxesView.m */; };
@@ -244,12 +245,14 @@
 		430AA37816BD727A0064D0DA /* MHImageEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImageEditorViewController.h; sourceTree = "<group>"; };
 		430AA37916BD727A0064D0DA /* MHImageEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHImageEditorViewController.m; sourceTree = "<group>"; };
 		430AA37A16BD727A0064D0DA /* MHImageEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHImageEditorViewController.xib; sourceTree = "<group>"; };
-		430AA38216BDAEFE0064D0DA /* MHWordLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHWordLabel.h; sourceTree = "<group>"; };
-		430AA38316BDAEFE0064D0DA /* MHWordLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHWordLabel.m; sourceTree = "<group>"; };
-		430AA38616BDBF940064D0DA /* MHBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHBox.h; sourceTree = "<group>"; };
-		430AA38716BDBF950064D0DA /* MHBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBox.m; sourceTree = "<group>"; };
-		430AA38D16BDD4330064D0DA /* MHData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHData.h; sourceTree = "<group>"; };
-		430AA38E16BDD4330064D0DA /* MHData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHData.m; sourceTree = "<group>"; };
+		FC6B5D7B16BDE5D4003FE5A5 /* MHData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHData.h; sourceTree = "<group>"; };
+		FC6B5D7C16BDE5D4003FE5A5 /* MHData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHData.m; sourceTree = "<group>"; };
+		FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRetakeCameraButton.m; sourceTree = "<group>"; };
+		FC6B5D8116BDE606003FE5A5 /* MHRetakeCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRetakeCameraButton.h; sourceTree = "<group>"; };
+		FC6B5D8416BDE634003FE5A5 /* MHBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHBox.h; sourceTree = "<group>"; };
+		FC6B5D8516BDE634003FE5A5 /* MHBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBox.m; sourceTree = "<group>"; };
+		FC6B5D8716BDE657003FE5A5 /* MHWordLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHWordLabel.h; sourceTree = "<group>"; };
+		FC6B5D8816BDE657003FE5A5 /* MHWordLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHWordLabel.m; sourceTree = "<group>"; };
 		FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCameraMaskView.h; sourceTree = "<group>"; };
 		FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCameraMaskView.m; sourceTree = "<group>"; };
 		FC78D47616BD7441005B3CFF /* MHFreezeCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFreezeCameraButton.h; sourceTree = "<group>"; };
@@ -351,6 +354,8 @@
 				430AA1A716BCCEE10064D0DA /* MHAppDelegate.m */,
 				430AA1AF16BCCEE10064D0DA /* MainStoryboard.storyboard */,
 				430AA1B216BCCEE10064D0DA /* MHViewController.h */,
+				FC6B5D7B16BDE5D4003FE5A5 /* MHData.h */,
+				FC6B5D7C16BDE5D4003FE5A5 /* MHData.m */,
 				430AA1B316BCCEE10064D0DA /* MHViewController.m */,
 				FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */,
 				FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */,
@@ -362,6 +367,12 @@
 				FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */,
 				FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */,
 				FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */,
+				FC6B5D8116BDE606003FE5A5 /* MHRetakeCameraButton.h */,
+				FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */,
+				FC6B5D8716BDE657003FE5A5 /* MHWordLabel.h */,
+				FC6B5D8816BDE657003FE5A5 /* MHWordLabel.m */,
+				FC6B5D8416BDE634003FE5A5 /* MHBox.h */,
+				FC6B5D8516BDE634003FE5A5 /* MHBox.m */,
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
 				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
@@ -369,12 +380,6 @@
 				430AA36316BD2D090064D0DA /* MHLoginViewController.xib */,
 				FC78D47616BD7441005B3CFF /* MHFreezeCameraButton.h */,
 				FC78D47716BD7441005B3CFF /* MHFreezeCameraButton.m */,
-				430AA38216BDAEFE0064D0DA /* MHWordLabel.h */,
-				430AA38316BDAEFE0064D0DA /* MHWordLabel.m */,
-				430AA38616BDBF940064D0DA /* MHBox.h */,
-				430AA38716BDBF950064D0DA /* MHBox.m */,
-				430AA38D16BDD4330064D0DA /* MHData.h */,
-				430AA38E16BDD4330064D0DA /* MHData.m */,
 			);
 			path = MHackberrithon;
 			sourceTree = "<group>";
@@ -737,9 +742,10 @@
 				430AA37B16BD727A0064D0DA /* MHImageEditorViewController.m in Sources */,
 				FC78D47816BD7441005B3CFF /* MHFreezeCameraButton.m in Sources */,
 				FC78D47B16BD83B0005B3CFF /* MHBoxesView.m in Sources */,
-				430AA38416BDAEFF0064D0DA /* MHWordLabel.m in Sources */,
-				430AA38816BDBF960064D0DA /* MHBox.m in Sources */,
-				430AA38F16BDD4330064D0DA /* MHData.m in Sources */,
+				FC6B5D7D16BDE5D4003FE5A5 /* MHData.m in Sources */,
+				FC6B5D8316BDE606003FE5A5 /* MHRetakeCameraButton.m in Sources */,
+				FC6B5D8616BDE634003FE5A5 /* MHBox.m in Sources */,
+				FC6B5D8916BDE657003FE5A5 /* MHWordLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@
 @synthesize delegate;
 @synthesize staticImageView;
 @synthesize freezeButton;
+@synthesize retakeButton;
 @synthesize boxesLayer;
 @synthesize wordLabel;
 
@@ -33,6 +34,10 @@
         [freezeButton addTarget:self action:@selector(captureTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:freezeButton];
         [self bringSubviewToFront:freezeButton];
+        
+        retakeButton = [[MHRetakeCameraButton alloc] initWithFrame:CGRectMake(self.frame.size.width*1.5/5, self.frame.size.height*4.5/6, self.frame.size.width*2.0/5, self.frame.size.height*1.0/10)];
+        [retakeButton addTarget:self action:@selector(retakeTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
         
         wordLabel = [[MHWordLabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height *1.0/3)];
         wordLabel.text = @"test";
@@ -59,6 +64,13 @@
     [self rearrangeSubviews];
 }
 
+- (void) removeStaticImage
+{
+
+    [staticImageView removeFromSuperview];
+    
+}
+
 - (void) rearrangeSubviews {
     
     NSArray * subs = self.subviews;
@@ -78,6 +90,26 @@
 - (void) captureTapped: (UIButton *)capture
 {
     [self.delegate needTakePicture:self];
+    [(MHFreezeCameraButton *)capture disableButton];
+    //[capture removeFromSuperview];
+    //[self addSubview:retakeButton];
+    //[self bringSubviewToFront:retakeButton];
+}
+
+- (void) retakeTapped: (UIButton *)retake
+{
+    //[self.delegate needResumeCamera:self];
+    [self removeStaticImage];
+    [retake removeFromSuperview];
+    [self addSubview:freezeButton];
+    [self bringSubviewToFront:freezeButton];
+}
+
+- (void) changeToRetakeButton
+{
+    [freezeButton removeFromSuperview];
+    [self addSubview:retakeButton];
+    [self bringSubviewToFront:retakeButton];
 }
 
 - (void)clearLabel:(UILabel *)label {

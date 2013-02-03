@@ -127,6 +127,11 @@
     NSLog(@"start");
     NSMutableArray *dataArray = [tesseract recognizeByWord];
     NSLog(@"end");
+    [tesseract getWordBoxes];
+    [tesseract getBlockBoxes];
+    
+    //int n = [tesseract getBoxesCount];
+    //int n = [tesseract getBlockCount];
     
 //    [tesseract getWordBoxes];
 //    [tesseract getBlockBoxes];
@@ -164,12 +169,18 @@
 //        [self dismissModalViewControllerAnimated:NO];
 //    }
 //    [self presentModalViewController:imageEditor animated:NO];
+    [(HBOverlayView *)(picker.cameraOverlayView) changeToRetakeButton];
 }
 
 - (void) needTakePicture: (HBOverlayView *)overlay
 {
     
     [picker takePicture];
+}
+
+- (void) needResumeCamera: (HBOverlayView *)overlay
+{
+    
 }
 - (void)didReceiveMemoryWarning
 {

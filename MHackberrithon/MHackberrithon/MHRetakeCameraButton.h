@@ -1,5 +1,5 @@
 //
-//  MHFreezeCameraButton.h
+//  MHRetakeCameraButton.h
 //  MHackberrithon
 //
 //  Created by Haidong Tang on 2/2/13.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MHFreezeCameraButton : UIButton
+@interface MHRetakeCameraButton : UIButton
 
-
-- (void)disableButton;
-- (void)activateButton;
 @end
-
