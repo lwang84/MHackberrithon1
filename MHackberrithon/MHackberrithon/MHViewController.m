@@ -97,15 +97,10 @@
 
     CGSize size = [nImage size];
     [tesseract setImage:nImage];
-<<<<<<< HEAD
     //[tesseract recognize];
     NSLog(@"start");
     [tesseract recognizeByWord];
     NSLog(@"end");
-=======
-    [tesseract recognize];
-    
->>>>>>> 4f7fb2bb4da3120faf3d011d7d602d87b6d123af
     [tesseract getWordBoxes];
     [tesseract getBlockBoxes];
     
@@ -140,12 +135,18 @@
 //        [self dismissModalViewControllerAnimated:NO];
 //    }
 //    [self presentModalViewController:imageEditor animated:NO];
+    [(HBOverlayView *)(picker.cameraOverlayView) changeToRetakeButton];
 }
 
 - (void) needTakePicture: (HBOverlayView *)overlay
 {
     
     [picker takePicture];
+}
+
+- (void) needResumeCamera: (HBOverlayView *)overlay
+{
+    
 }
 - (void)didReceiveMemoryWarning
 {
