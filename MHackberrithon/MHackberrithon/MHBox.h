@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MHConfirmButtons.h"
+#import "MHRecognizedTextView.h"
 
 @interface MHBox : UIButton
 
 @property NSString *word;
 
 - (id)initWithFrame:(CGRect)frame word:(NSString *)w;
+
+@property (retain) MHConfirmButtons * confirmView;
+@property (retain) MHRecognizedTextView * textView;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "MHBoxesView.h"
 #import "MHBox.h"
+#import "MHInfoComplex.h"
 
 @implementation MHBoxesView
 
@@ -35,7 +36,23 @@
     for (int i = 0; i < [self.boxes count]; i++) {
         CGRect box =  [(NSValue *)[self.boxes objectAtIndex:i] CGRectValue];
         CGRect scaledBox = [self scaleBox:box];
-        MHBox *boxView = [[MHBox alloc] initWithFrame:scaledBox word:[self.words objectAtIndex:i]];
+        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i]];
+        //[complex addSubview:boxView];
+        
+        double delay = (arc4random() % 20)*1.0/20*0.7;
+        
+        UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut;
+        [UIView animateWithDuration:0.3 delay:delay options:options animations:^{
+            boxView.frame = CGRectMake(scaledBox.origin.x-0.1*scaledBox.size.width, scaledBox.origin.y-0.1*scaledBox.size.height, scaledBox.size.width*1.2, scaledBox.size.height*1.2);
+        } completion:^(BOOL finished) {
+            
+            UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut;
+            [UIView animateWithDuration:0.3 delay:0.0 options:options animations:^{
+                boxView.frame = scaledBox;
+            } completion:nil];
+ 
+        }];
+        
         [self addSubview:boxView];
     }
 
@@ -62,10 +79,10 @@
 */
 
 - (CGRect)scaleBox:(CGRect) box {
-    return CGRectMake(box.origin.x/self.imageSize.width * self.frame.size.width,
-                      box.origin.y/self.imageSize.height * self.frame.size.height,
+    return CGRectMake(0+box.origin.x/self.imageSize.width * self.frame.size.width,
+                      self.frame.size.height*1.0/3+box.origin.y/self.imageSize.height * self.frame.size.height*1.0/3,
                       box.size.width/self.imageSize.width * self.frame.size.width,
-                      box.size.height/self.imageSize.height * self.frame.size.height);
+                      box.size.height/self.imageSize.height * self.frame.size.height*1.0/3);
 }
 
 

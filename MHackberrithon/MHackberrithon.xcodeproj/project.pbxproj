@@ -40,6 +40,9 @@
 		FC6B5D8316BDE606003FE5A5 /* MHRetakeCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */; };
 		FC6B5D8616BDE634003FE5A5 /* MHBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8516BDE634003FE5A5 /* MHBox.m */; };
 		FC6B5D8916BDE657003FE5A5 /* MHWordLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8816BDE657003FE5A5 /* MHWordLabel.m */; };
+		FC6B5D8C16BDF47E003FE5A5 /* MHInfoComplex.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8B16BDF47E003FE5A5 /* MHInfoComplex.m */; };
+		FC6B5D8F16BE0AA4003FE5A5 /* MHConfirmButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8E16BE0AA4003FE5A5 /* MHConfirmButtons.m */; };
+		FC6B5D9216BE0ABE003FE5A5 /* MHRecognizedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D9116BE0ABE003FE5A5 /* MHRecognizedTextView.m */; };
 		FC78D47516BD6820005B3CFF /* MHCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */; };
 		FC78D47816BD7441005B3CFF /* MHFreezeCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47716BD7441005B3CFF /* MHFreezeCameraButton.m */; };
 		FC78D47B16BD83B0005B3CFF /* MHBoxesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78D47A16BD83B0005B3CFF /* MHBoxesView.m */; };
@@ -253,6 +256,12 @@
 		FC6B5D8516BDE634003FE5A5 /* MHBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBox.m; sourceTree = "<group>"; };
 		FC6B5D8716BDE657003FE5A5 /* MHWordLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHWordLabel.h; sourceTree = "<group>"; };
 		FC6B5D8816BDE657003FE5A5 /* MHWordLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHWordLabel.m; sourceTree = "<group>"; };
+		FC6B5D8A16BDF47E003FE5A5 /* MHInfoComplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHInfoComplex.h; sourceTree = "<group>"; };
+		FC6B5D8B16BDF47E003FE5A5 /* MHInfoComplex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHInfoComplex.m; sourceTree = "<group>"; };
+		FC6B5D8D16BE0AA4003FE5A5 /* MHConfirmButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHConfirmButtons.h; sourceTree = "<group>"; };
+		FC6B5D8E16BE0AA4003FE5A5 /* MHConfirmButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHConfirmButtons.m; sourceTree = "<group>"; };
+		FC6B5D9016BE0ABE003FE5A5 /* MHRecognizedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHRecognizedTextView.h; sourceTree = "<group>"; };
+		FC6B5D9116BE0ABE003FE5A5 /* MHRecognizedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRecognizedTextView.m; sourceTree = "<group>"; };
 		FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCameraMaskView.h; sourceTree = "<group>"; };
 		FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCameraMaskView.m; sourceTree = "<group>"; };
 		FC78D47616BD7441005B3CFF /* MHFreezeCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFreezeCameraButton.h; sourceTree = "<group>"; };
@@ -371,8 +380,14 @@
 				FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */,
 				FC6B5D8716BDE657003FE5A5 /* MHWordLabel.h */,
 				FC6B5D8816BDE657003FE5A5 /* MHWordLabel.m */,
+				FC6B5D8A16BDF47E003FE5A5 /* MHInfoComplex.h */,
+				FC6B5D8B16BDF47E003FE5A5 /* MHInfoComplex.m */,
 				FC6B5D8416BDE634003FE5A5 /* MHBox.h */,
 				FC6B5D8516BDE634003FE5A5 /* MHBox.m */,
+				FC6B5D8D16BE0AA4003FE5A5 /* MHConfirmButtons.h */,
+				FC6B5D8E16BE0AA4003FE5A5 /* MHConfirmButtons.m */,
+				FC6B5D9016BE0ABE003FE5A5 /* MHRecognizedTextView.h */,
+				FC6B5D9116BE0ABE003FE5A5 /* MHRecognizedTextView.m */,
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
 				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
@@ -746,6 +761,9 @@
 				FC6B5D8316BDE606003FE5A5 /* MHRetakeCameraButton.m in Sources */,
 				FC6B5D8616BDE634003FE5A5 /* MHBox.m in Sources */,
 				FC6B5D8916BDE657003FE5A5 /* MHWordLabel.m in Sources */,
+				FC6B5D8C16BDF47E003FE5A5 /* MHInfoComplex.m in Sources */,
+				FC6B5D8F16BE0AA4003FE5A5 /* MHConfirmButtons.m in Sources */,
+				FC6B5D9216BE0ABE003FE5A5 /* MHRecognizedTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
