@@ -34,7 +34,7 @@
     self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     
-    // See if we have a valid token for the current state.
+//    // See if we have a valid token for the current state.
 //    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
 //        // Yes, so just open the session (this won't display any UX).
 //        [self openSession];

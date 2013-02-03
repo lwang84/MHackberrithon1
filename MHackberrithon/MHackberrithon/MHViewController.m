@@ -25,17 +25,42 @@
 {
     [super viewDidLoad];
     
-    UIButton *capture = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 50)];
-    [capture setTitle:@"aaa" forState:UIControlStateNormal];
-    [capture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    
-    [capture addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    [self.view addSubview:capture];
+//    UIButton *capture = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 50)];
+//    [capture setTitle:@"aaa" forState:UIControlStateNormal];
+//    [capture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//    
+//    [capture addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    
+//    [self.view addSubview:capture];
     
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, self.view.superview.superview.frame.size.width,self.view.superview.superview.frame.size.height)];
+    overlay.delegate = self;
+	
+	// Create a new image picker instance:
+	picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+	
+	// Set the image picker source:
+	picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	
+	// Hide the controls:
+	picker.showsCameraControls = NO;
+	picker.navigationBarHidden = YES;
+	
+	// Make camera view full screen:
+	picker.wantsFullScreenLayout = YES;
+	picker.cameraViewTransform = CGAffineTransformScale(picker.cameraViewTransform, 1, 1.24299);
+	
+	// Insert the overlay:
+	picker.cameraOverlayView = overlay;
+	
+	// Show the picker:
+	[self presentModalViewController:picker animated:YES];
+}
 - (void) buttonTapped: (UIButton *)capture
 {
     HBOverlayView *overlay = [[HBOverlayView alloc] initWithFrame:CGRectMake(0, 0, self.view.superview.superview.frame.size.width,self.view.superview.superview.frame.size.height)];
