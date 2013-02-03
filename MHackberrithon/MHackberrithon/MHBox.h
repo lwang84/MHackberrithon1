@@ -32,6 +32,10 @@
 - (BOOL) checkREGEX: (NSString *) expression;
 @property (assign) id<MHBoxDelegate>delegate;
 
+@property BOOL isEmail;
+@property BOOL isPhone;
+@property BOOL isURL;
+
 
 - (id)initWithFrame:(CGRect)frame
                word:(NSString *)w

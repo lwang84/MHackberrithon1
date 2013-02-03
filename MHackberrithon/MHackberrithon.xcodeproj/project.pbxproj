@@ -61,8 +61,9 @@
 		430AA57016BE1D1C0064D0DA /* AppledocSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 430AA40516BE1D1B0064D0DA /* AppledocSettings.plist */; };
 		430AA57116BE1D1C0064D0DA /* RegenerateApiDocumentation in Resources */ = {isa = PBXBuildFile; fileRef = 430AA40716BE1D1B0064D0DA /* RegenerateApiDocumentation */; };
 		430AA57216BE1D1C0064D0DA /* RegenerateCredits in Resources */ = {isa = PBXBuildFile; fileRef = 430AA40816BE1D1B0064D0DA /* RegenerateCredits */; };
-		430AA6DB16BE258B0064D0DA /* MHFacebookSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA6D816BE258B0064D0DA /* MHFacebookSearchView.m */; };
-		430AA6DC16BE258B0064D0DA /* MHSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA6DA16BE258B0064D0DA /* MHSearchButton.m */; };
+		430AA6EB16BE42810064D0DA /* MHSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA6EA16BE42810064D0DA /* MHSearchButton.m */; };
+		430AA6EF16BE42910064D0DA /* MHTypeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA6EE16BE42910064D0DA /* MHTypeIndicator.m */; };
+		430AA6F216BE42B20064D0DA /* MHFacebookSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA6F116BE42B20064D0DA /* MHFacebookSearchView.m */; };
 		FC6B5D7D16BDE5D4003FE5A5 /* MHData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D7C16BDE5D4003FE5A5 /* MHData.m */; };
 		FC6B5D8316BDE606003FE5A5 /* MHRetakeCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */; };
 		FC6B5D8616BDE634003FE5A5 /* MHBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B5D8516BDE634003FE5A5 /* MHBox.m */; };
@@ -324,10 +325,12 @@
 		430AA40516BE1D1B0064D0DA /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
 		430AA40716BE1D1B0064D0DA /* RegenerateApiDocumentation */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RegenerateApiDocumentation; sourceTree = "<group>"; };
 		430AA40816BE1D1B0064D0DA /* RegenerateCredits */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RegenerateCredits; sourceTree = "<group>"; };
-		430AA6D716BE258B0064D0DA /* MHFacebookSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFacebookSearchView.h; sourceTree = "<group>"; };
-		430AA6D816BE258B0064D0DA /* MHFacebookSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFacebookSearchView.m; sourceTree = "<group>"; };
-		430AA6D916BE258B0064D0DA /* MHSearchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSearchButton.h; sourceTree = "<group>"; };
-		430AA6DA16BE258B0064D0DA /* MHSearchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSearchButton.m; sourceTree = "<group>"; };
+		430AA6E916BE42810064D0DA /* MHSearchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSearchButton.h; sourceTree = "<group>"; };
+		430AA6EA16BE42810064D0DA /* MHSearchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSearchButton.m; sourceTree = "<group>"; };
+		430AA6ED16BE42910064D0DA /* MHTypeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTypeIndicator.h; sourceTree = "<group>"; };
+		430AA6EE16BE42910064D0DA /* MHTypeIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTypeIndicator.m; sourceTree = "<group>"; };
+		430AA6F016BE42B20064D0DA /* MHFacebookSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFacebookSearchView.h; sourceTree = "<group>"; };
+		430AA6F116BE42B20064D0DA /* MHFacebookSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFacebookSearchView.m; sourceTree = "<group>"; };
 		FC6B5D7B16BDE5D4003FE5A5 /* MHData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHData.h; sourceTree = "<group>"; };
 		FC6B5D7C16BDE5D4003FE5A5 /* MHData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHData.m; sourceTree = "<group>"; };
 		FC6B5D8016BDE606003FE5A5 /* MHRetakeCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHRetakeCameraButton.m; sourceTree = "<group>"; };
@@ -444,6 +447,12 @@
 		430AA19D16BCCEE10064D0DA /* MHackberrithon */ = {
 			isa = PBXGroup;
 			children = (
+				430AA6F016BE42B20064D0DA /* MHFacebookSearchView.h */,
+				430AA6F116BE42B20064D0DA /* MHFacebookSearchView.m */,
+				430AA6ED16BE42910064D0DA /* MHTypeIndicator.h */,
+				430AA6EE16BE42910064D0DA /* MHTypeIndicator.m */,
+				430AA6E916BE42810064D0DA /* MHSearchButton.h */,
+				430AA6EA16BE42810064D0DA /* MHSearchButton.m */,
 				430AA37816BD727A0064D0DA /* MHImageEditorViewController.h */,
 				430AA37916BD727A0064D0DA /* MHImageEditorViewController.m */,
 				430AA37A16BD727A0064D0DA /* MHImageEditorViewController.xib */,
@@ -456,10 +465,6 @@
 				430AA1B316BCCEE10064D0DA /* MHViewController.m */,
 				FC926AA116BCF53E00D8EF00 /* MHImagePickerController.h */,
 				FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */,
-				430AA6D716BE258B0064D0DA /* MHFacebookSearchView.h */,
-				430AA6D816BE258B0064D0DA /* MHFacebookSearchView.m */,
-				430AA6D916BE258B0064D0DA /* MHSearchButton.h */,
-				430AA6DA16BE258B0064D0DA /* MHSearchButton.m */,
 				FCCEAAD116BCD40900317762 /* MHSmileyFace.h */,
 				FCCEAAD216BCD40900317762 /* MHSmileyFace.m */,
 				FC78D47916BD83B0005B3CFF /* MHBoxesView.h */,
@@ -978,8 +983,9 @@
 				430AA56D16BE1D1C0064D0DA /* SBJsonStreamWriterAccumulator.m in Sources */,
 				430AA56E16BE1D1C0064D0DA /* SBJsonStreamWriterState.m in Sources */,
 				430AA56F16BE1D1C0064D0DA /* SBJsonWriter.m in Sources */,
-				430AA6DB16BE258B0064D0DA /* MHFacebookSearchView.m in Sources */,
-				430AA6DC16BE258B0064D0DA /* MHSearchButton.m in Sources */,
+				430AA6EB16BE42810064D0DA /* MHSearchButton.m in Sources */,
+				430AA6EF16BE42910064D0DA /* MHTypeIndicator.m in Sources */,
+				430AA6F216BE42B20064D0DA /* MHFacebookSearchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
