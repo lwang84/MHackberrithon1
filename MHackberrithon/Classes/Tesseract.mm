@@ -133,7 +133,7 @@ namespace tesseract {
             float confidence = ri->Confidence(tesseract::RIL_TEXTLINE);
             int left, top, right, bottom;
             ri->BoundingBox(tesseract::RIL_TEXTLINE, &left, &top, &right, &bottom);
-            MHData *data = [[MHData alloc] initWithConfidence:confidence word:symbol left:left right:right top:top bottom:bottom];
+            MHData *data = [[MHData alloc] initWithConfidence:confidence word:[NSString stringWithUTF8String:symbol] left:left right:right top:top bottom:bottom];
             
             [dataArray addObject:data];
             /*

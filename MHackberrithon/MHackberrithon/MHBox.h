@@ -13,4 +13,7 @@
 @property NSString *word;
 
 - (id)initWithFrame:(CGRect)frame word:(NSString *)w;
+
+- (BOOL) checkREGEX: (NSString *) expression;
+
 @end
