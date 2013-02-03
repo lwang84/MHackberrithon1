@@ -20,6 +20,8 @@
 		
 		[self addSubview:buttonImage];
         // Initialization code
+        
+        [self addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
@@ -32,5 +34,11 @@
     // Drawing code
 }
 */
+
+- (void)tapped: (UIButton *) btn
+{
+    NSLog(@"%@", @"confirm");
+    [self.superview endEditing:TRUE];
+}
 
 @end

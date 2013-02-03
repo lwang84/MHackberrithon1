@@ -43,11 +43,11 @@
         CGRect box =  [(NSValue *)[self.boxes objectAtIndex:i] CGRectValue];
         CGRect scaledBox = [self scaleBox:box];
         
-        MHConfirmButtons * confirm = [[MHConfirmButtons alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-        MHRecognizedTextView * textview = [[MHRecognizedTextView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-        MHSearchButton * search = [[MHSearchButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0) assignedSuper:self.superview];
+        //MHConfirmButtons * confirm = [[MHConfirmButtons alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        //MHRecognizedTextView * textview = [[MHRecognizedTextView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        //MHSearchButton * search = [[MHSearchButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0) assignedSuper:self.superview words:[self.words objectAtIndex:i]];
         
-        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i] buttons:confirm textview:textview searchBtn:search];
+        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i] buttons:nil textview:nil searchBtn:nil];
         //[complex addSubview:boxView];
         boxView.delegate = self;
         
@@ -140,11 +140,11 @@
     
     [self.indicator removeFromSuperview];
     
-    NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSString *emailExpression = @".+@[A-Za-z0-9.-]+";
     NSString *phoneExpression = @".+[123456789.]+";
-    NSString *urlExpression = @"[w.]+[a-z.]+";
+    NSString *urlExpression = @".+[w.]+[a-z.]+";
     
-    if ([self checkREGEX:emailExpression forString:str]){
+    if ([self checkREGEX:emailExpression forString: str]){
         self.indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40) imageName:@"gamil.png"];
         [self.superview addSubview:self.indicator];
         

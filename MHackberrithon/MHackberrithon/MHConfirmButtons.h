@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MHConfirmButtons : UIView
+@interface MHConfirmButtons : UIButton
 
 @end

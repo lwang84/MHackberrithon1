@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MHFacebookSearchView : UIView
+@interface MHFacebookSearchView : UITableView <UITableViewDataSource, UITableViewDelegate>
+
+- (id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style words: (NSString *) w;
+@property NSString *words;
+
+@property NSMutableArray *events;
 
 @end
