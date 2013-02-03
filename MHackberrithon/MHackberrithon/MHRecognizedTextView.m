@@ -16,6 +16,7 @@
     if (self) {
         
         [self setFont: [ UIFont systemFontOfSize: 23 ]];
+        self.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
         //[self setTextColor:[UIColor blackColor]];
 
         // Initialization code

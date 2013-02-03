@@ -9,11 +9,13 @@
 #import "MHSearchButton.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MHFacebookSearchView.h"
+#import "MHBoxesView.h"
+#import "HBOverlayView.h"
 
 @implementation MHSearchButton
 
 @synthesize assignedSuperView;
-- (id)initWithFrame:(CGRect)frame assignedSuper: (UIView *)view words:(NSString *)w
+- (id)initWithFrame:(CGRect)frame assignedSuper: (UIView *)view
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -27,7 +29,6 @@
         assignedSuperView = view;
         [self addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
         // Initialization code
-        self.words = w;
     }
     return self;
 }
@@ -35,13 +36,21 @@
 - (void)tapped: (UIButton *) btn
 {
     NSLog(@"facebook");
-    MHFacebookSearchView * facebook = [[MHFacebookSearchView alloc] initWithFrame:CGRectMake(0, assignedSuperView.frame.size.height, assignedSuperView.frame.size.width, assignedSuperView.frame.size.height) style:UITableViewStylePlain words:self.words];
+    HBOverlayView *parentView = (HBOverlayView *)self.assignedSuperView;
+    NSString *str = nil;
+    for (UIView *view in parentView.subviews) {
+        if ([view isKindOfClass:[MHBoxesView class]]) {
+            str = [(MHBoxesView *)view textView].text;
+        }
+    }
+    MHFacebookSearchView * facebook = [[MHFacebookSearchView alloc] initWithFrame:CGRectMake(0, assignedSuperView.frame.size.height, assignedSuperView.frame.size.width, assignedSuperView.frame.size.height) style:UITableViewStylePlain words: str];
     [assignedSuperView addSubview:facebook];
+    [assignedSuperView bringSubviewToFront:facebook];
     
     UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut;
     [UIView animateWithDuration:0.3 delay:0.0 options:options animations:^{
         facebook.frame = CGRectMake(0, 0, assignedSuperView.frame.size.width, assignedSuperView.frame.size.height);
-    } completion:nil];    
+    } completion:nil];  
 }
 
 /*

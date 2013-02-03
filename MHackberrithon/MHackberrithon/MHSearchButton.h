@@ -10,8 +10,7 @@
 
 @interface MHSearchButton : UIButton
 
-- (id)initWithFrame:(CGRect)frame assignedSuper: (UIView *)view words: (NSString *)w;
+- (id)initWithFrame:(CGRect)frame assignedSuper: (UIView *)view;
 @property (retain) UIView* assignedSuperView;
-@property NSString *words;
 
 @end

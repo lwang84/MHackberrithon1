@@ -9,6 +9,7 @@
 #import "MHFacebookSearchView.h"
 #import "ASIHTTPRequest.h"
 #import "SBJson.h"
+#import "MHFacebookTableCell.h"
 
 @implementation MHFacebookSearchView
 
@@ -30,8 +31,8 @@
         
         // Initialization code
         
-        //NSString *str = [NSString stringWithFormat:@"https://graph.facebook.com/search?fields=name&q=%@&type=event&access_token=AAAAAAITEghMBAHYQsr5ip1FpMi6ZC7ZBzYzbMoiZCa6xtf5YYIxWnlXZA6APb1z6GaFIqoBYrtQ7bGZAMQiMo1c2zgmG9QqTTRtoYYFwVmwZDZD", [self.words stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
-        NSString *str = @"https://graph.facebook.com/search?fields=name&q=mhack&type=event&access_token=AAAAAAITEghMBAHYQsr5ip1FpMi6ZC7ZBzYzbMoiZCa6xtf5YYIxWnlXZA6APb1z6GaFIqoBYrtQ7bGZAMQiMo1c2zgmG9QqTTRtoYYFwVmwZDZD";
+        NSString *str = [NSString stringWithFormat:@"https://graph.facebook.com/search?fields=name&q=%@&type=event&access_token=AAAAAAITEghMBAHYQsr5ip1FpMi6ZC7ZBzYzbMoiZCa6xtf5YYIxWnlXZA6APb1z6GaFIqoBYrtQ7bGZAMQiMo1c2zgmG9QqTTRtoYYFwVmwZDZD", [self.words stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
+        //NSString *str = @"https://graph.facebook.com/search?fields=name&q=mhack&type=event&access_token=AAAAAAITEghMBAKGnZCvwT4QzMsc2cx5PkKYa00ZBXnVZCFbiCMYEr1cmeMMCsAA8I05yRoENsZAZAa4OROdaoPwZBQL2PHJtSsShf2T61KYgZDZD";
         NSLog(@"%@", str);
         NSURL *url = [NSURL URLWithString:str];
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
@@ -116,9 +117,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MHFacebookTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[MHFacebookTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Set the data for this cell:
@@ -129,5 +130,9 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [indexPath row] * 20;
+}
 
 @end
