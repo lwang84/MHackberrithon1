@@ -27,10 +27,11 @@
 - (int) getBoxesCount;
 - (CGRect) getBoxes:(int) i;
 - (int) getWordConfidenceAt: (int) i;
+- (char *)getWordAt: (int) i;
 
 - (void) getBlockBoxes;
 - (int) getBlockCount;
 - (CGRect) getBlock:(int) i;
--(BOOL) recognizeByWord;
+- (NSMutableArray *) recognizeByWord;
 
 @end

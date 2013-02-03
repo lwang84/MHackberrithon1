@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Tesseract.h"
 
+@class MHBoxesView;
+
+@protocol MHBoxesViewDelegate 
+
+-(void)needChangeLabel: (NSString *) word;
+
+@end
+
 @interface MHBoxesView : UIView
 
 - (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences;
@@ -17,5 +25,7 @@
 @property NSMutableArray *confidences;
 
 @property CGSize imageSize;
+
+@property (assign) id<MHBoxesViewDelegate>delegate;
 
 @end
