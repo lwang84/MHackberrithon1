@@ -8,6 +8,8 @@
 
 #import "MHBox.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MHTypeIndicator.h"
+
 
 
 @implementation MHBox
@@ -16,6 +18,10 @@
 @synthesize textView;
 @synthesize delegate;
 @synthesize searchBtn;
+
+@synthesize isEmail;
+@synthesize isPhone;
+@synthesize isURL;
 
 - (id)initWithFrame:(CGRect)frame
                word:(NSString *)w
@@ -26,6 +32,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.clipsToBounds = NO;
         self.backgroundColor = [UIColor blueColor];
         self.alpha = 0.4;
         self.layer.cornerRadius = 4;
@@ -40,6 +47,34 @@
         searchBtn = search;
         [self addTarget:self action:@selector(originalTapped:) forControlEvents:UIControlEventTouchUpInside];
         self.word = w;
+        
+        
+        isEmail = NO;
+        isPhone = NO;
+        isURL = NO;
+        NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+        NSString *phoneExpression = @".+[123456789.]+";
+        NSString *urlExpression = @"[w.]+[a-z.]+";
+        
+        if ([self checkREGEX:emailExpression]){
+            MHTypeIndicator *indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40) imageName:@"gamil.png"];
+            [self addSubview:indicator];
+            [self bringSubviewToFront:indicator];
+                        
+        }
+        else if ([self checkREGEX:phoneExpression]) {
+            MHTypeIndicator *indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40) imageName:@"phone1.png"];
+            [self addSubview:indicator];
+            [self bringSubviewToFront:indicator];
+        
+        }
+        else if([self checkREGEX:urlExpression]) {
+            MHTypeIndicator *indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40)imageName:@"web1.png"];
+            [self addSubview:indicator];
+            [self bringSubviewToFront:indicator];
+            
+        }
+        
     }
     return self;
 }
@@ -55,6 +90,9 @@
     searchBtn.frame = CGRectMake(self.frame.origin.x+self.frame.size.width-160, self.frame.origin.y+self.frame.size.height, 30, 30);
     [self.superview addSubview:searchBtn];
 
+    
+    
+    
     
     [self.delegate originalGotTapped:self];
     NSLog(@"%@",self.word);
@@ -82,9 +120,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSString *phoneExpression = @".+[123456789.]+";
-    NSString *urlExpression = @"[w.]+[a-z.]+";
+    
     
     // Drawing code
     

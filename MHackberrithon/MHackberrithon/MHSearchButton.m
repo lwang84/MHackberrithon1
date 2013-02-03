@@ -17,7 +17,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blueColor];
+        //self.backgroundColor = [UIColor blueColor];
+        
+        UIImageView *buttonImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+		buttonImage.image = [UIImage imageNamed:@"search.png"];
+		
+		[self addSubview:buttonImage];
+        
         assignedSuperView = view;
         [self addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
         // Initialization code

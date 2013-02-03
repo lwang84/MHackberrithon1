@@ -49,6 +49,15 @@
 		FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC926AA216BCF53E00D8EF00 /* MHImagePickerController.m */; };
 		FCC0E07316BE23D100A604FD /* MHFacebookSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0E06F16BE23D100A604FD /* MHFacebookSearchView.m */; };
 		FCC0E07416BE23D100A604FD /* MHSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0E07016BE23D100A604FD /* MHSearchButton.m */; };
+		FCC0E07716BE27A900A604FD /* MHTypeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0E07616BE27A900A604FD /* MHTypeIndicator.m */; };
+		FCC0E07B16BE2B4700A604FD /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E07816BE2B4600A604FD /* web.png */; };
+		FCC0E07C16BE2B4700A604FD /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E07916BE2B4600A604FD /* phone.png */; };
+		FCC0E07D16BE2B4700A604FD /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E07A16BE2B4700A604FD /* email.png */; };
+		FCC0E07F16BE2D0600A604FD /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E07E16BE2D0500A604FD /* gmail.png */; };
+		FCC0E08216BE2DAA00A604FD /* web1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E08016BE2DA900A604FD /* web1.png */; };
+		FCC0E08316BE2DAA00A604FD /* phone1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E08116BE2DA900A604FD /* phone1.png */; };
+		FCC0E08616BE2F6E00A604FD /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E08416BE2F6E00A604FD /* search.png */; };
+		FCC0E08716BE2F6E00A604FD /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC0E08516BE2F6E00A604FD /* check.png */; };
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
 		FCCEAAEF16BCE4FB00317762 /* HBOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */; };
@@ -276,6 +285,16 @@
 		FCC0E07016BE23D100A604FD /* MHSearchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSearchButton.m; sourceTree = "<group>"; };
 		FCC0E07116BE23D100A604FD /* MHSearchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSearchButton.h; sourceTree = "<group>"; };
 		FCC0E07216BE23D100A604FD /* MHFacebookSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFacebookSearchView.h; sourceTree = "<group>"; };
+		FCC0E07516BE27A900A604FD /* MHTypeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTypeIndicator.h; sourceTree = "<group>"; };
+		FCC0E07616BE27A900A604FD /* MHTypeIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTypeIndicator.m; sourceTree = "<group>"; };
+		FCC0E07816BE2B4600A604FD /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = web.png; path = MHackberrithon/web.png; sourceTree = "<group>"; };
+		FCC0E07916BE2B4600A604FD /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phone.png; path = MHackberrithon/phone.png; sourceTree = "<group>"; };
+		FCC0E07A16BE2B4700A604FD /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = MHackberrithon/email.png; sourceTree = "<group>"; };
+		FCC0E07E16BE2D0500A604FD /* gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gmail.png; path = MHackberrithon/gmail.png; sourceTree = "<group>"; };
+		FCC0E08016BE2DA900A604FD /* web1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web1.png; sourceTree = "<group>"; };
+		FCC0E08116BE2DA900A604FD /* phone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone1.png; sourceTree = "<group>"; };
+		FCC0E08416BE2F6E00A604FD /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		FCC0E08516BE2F6E00A604FD /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		FCCEAAD116BCD40900317762 /* MHSmileyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSmileyFace.h; sourceTree = "<group>"; };
 		FCCEAAD216BCD40900317762 /* MHSmileyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSmileyFace.m; sourceTree = "<group>"; };
 		FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -326,6 +345,14 @@
 				FCCEAAF616BCECA600317762 /* eng.traineddata */,
 				FCCEAAF716BCECA600317762 /* sample1.jpg */,
 				FCCEAAF316BCE53D00317762 /* scanbutton.png */,
+				FCC0E07816BE2B4600A604FD /* web.png */,
+				FCC0E07916BE2B4600A604FD /* phone.png */,
+				FCC0E07E16BE2D0500A604FD /* gmail.png */,
+				FCC0E07A16BE2B4700A604FD /* email.png */,
+				FCC0E08016BE2DA900A604FD /* web1.png */,
+				FCC0E08116BE2DA900A604FD /* phone1.png */,
+				FCC0E08416BE2F6E00A604FD /* search.png */,
+				FCC0E08516BE2F6E00A604FD /* check.png */,
 				430AA19D16BCCEE10064D0DA /* MHackberrithon */,
 				430AA1C116BCCEE10064D0DA /* MHackberrithonTests */,
 				430AA19616BCCEE10064D0DA /* Frameworks */,
@@ -398,6 +425,8 @@
 				FC6B5D8E16BE0AA4003FE5A5 /* MHConfirmButtons.m */,
 				FC6B5D9016BE0ABE003FE5A5 /* MHRecognizedTextView.h */,
 				FC6B5D9116BE0ABE003FE5A5 /* MHRecognizedTextView.m */,
+				FCC0E07516BE27A900A604FD /* MHTypeIndicator.h */,
+				FCC0E07616BE27A900A604FD /* MHTypeIndicator.m */,
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
 				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
@@ -721,6 +750,14 @@
 				430AA35A16BD2B510064D0DA /* MHViewController.xib in Resources */,
 				430AA36416BD2D090064D0DA /* MHLoginViewController.xib in Resources */,
 				430AA37C16BD727A0064D0DA /* MHImageEditorViewController.xib in Resources */,
+				FCC0E07B16BE2B4700A604FD /* web.png in Resources */,
+				FCC0E07C16BE2B4700A604FD /* phone.png in Resources */,
+				FCC0E07D16BE2B4700A604FD /* email.png in Resources */,
+				FCC0E07F16BE2D0600A604FD /* gmail.png in Resources */,
+				FCC0E08216BE2DAA00A604FD /* web1.png in Resources */,
+				FCC0E08316BE2DAA00A604FD /* phone1.png in Resources */,
+				FCC0E08616BE2F6E00A604FD /* search.png in Resources */,
+				FCC0E08716BE2F6E00A604FD /* check.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +813,7 @@
 				FC6B5D9216BE0ABE003FE5A5 /* MHRecognizedTextView.m in Sources */,
 				FCC0E07316BE23D100A604FD /* MHFacebookSearchView.m in Sources */,
 				FCC0E07416BE23D100A604FD /* MHSearchButton.m in Sources */,
+				FCC0E07716BE27A900A604FD /* MHTypeIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

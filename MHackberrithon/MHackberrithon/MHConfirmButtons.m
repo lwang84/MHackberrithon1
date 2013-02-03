@@ -14,7 +14,11 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
+        //self.backgroundColor = [UIColor blackColor];
+        UIImageView *buttonImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+		buttonImage.image = [UIImage imageNamed:@"check"];
+		
+		[self addSubview:buttonImage];
         // Initialization code
     }
     return self;
