@@ -15,11 +15,13 @@
 @synthesize confirmView;
 @synthesize textView;
 @synthesize delegate;
+@synthesize searchBtn;
 
 - (id)initWithFrame:(CGRect)frame
                word:(NSString *)w
             buttons:(MHConfirmButtons *)btns
            textview:(MHRecognizedTextView *)txtview
+          searchBtn:(MHSearchButton *) search
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -35,6 +37,7 @@
          */
         confirmView = btns;
         textView = txtview;
+        searchBtn = search;
         [self addTarget:self action:@selector(originalTapped:) forControlEvents:UIControlEventTouchUpInside];
         self.word = w;
     }
@@ -48,6 +51,10 @@
     textView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y-70, self.frame.size.width, 100);
     [self.superview addSubview:textView];
     textView.text = self.word;
+    
+    searchBtn.frame = CGRectMake(self.frame.origin.x+self.frame.size.width-160, self.frame.origin.y+self.frame.size.height, 30, 30);
+    [self.superview addSubview:searchBtn];
+
     
     [self.delegate originalGotTapped:self];
     NSLog(@"%@",self.word);
