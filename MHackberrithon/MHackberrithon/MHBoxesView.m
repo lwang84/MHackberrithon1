@@ -140,11 +140,11 @@
     
     [self.indicator removeFromSuperview];
     
-    NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSString *emailExpression = @".+@[A-Za-z0-9.-]+";
     NSString *phoneExpression = @".+[123456789.]+";
-    NSString *urlExpression = @"[w.]+[a-z.]+";
+    NSString *urlExpression = @".+[w.]+[a-z.]+";
     
-    if ([self checkREGEX:emailExpression forString:str]){
+    if ([self checkREGEX:emailExpression forString: str]){
         self.indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40) imageName:@"gamil.png"];
         [self.superview addSubview:self.indicator];
         

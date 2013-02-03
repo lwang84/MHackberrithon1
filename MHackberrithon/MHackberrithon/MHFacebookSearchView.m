@@ -19,7 +19,7 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         
-        UIButton *dismiss = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        UIButton *dismiss = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
         dismiss.backgroundColor = [UIColor blueColor];
         [self addSubview:dismiss];
         [dismiss addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
@@ -31,7 +31,7 @@
         
         // Initialization code
         
-        NSString *str = [NSString stringWithFormat:@"https://graph.facebook.com/search?fields=name&q=%@&type=event&access_token=AAAAAAITEghMBAHYQsr5ip1FpMi6ZC7ZBzYzbMoiZCa6xtf5YYIxWnlXZA6APb1z6GaFIqoBYrtQ7bGZAMQiMo1c2zgmG9QqTTRtoYYFwVmwZDZD", [self.words stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
+        NSString *str = [NSString stringWithFormat:@"https://graph.facebook.com/search?fields=name&q=%@&type=event&access_token=AAACEdEose0cBAFE9dD0CrrT5a5j1gnqcG22LlfEUhfNdLtZAq0SrQkMOq6Yhx5NJRXQ4z7lIdO0fjDpmeBPi4R5vhqH6gLDbCSmEhpQZDZD", [self.words stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
         //NSString *str = @"https://graph.facebook.com/search?fields=name&q=mhack&type=event&access_token=AAAAAAITEghMBAKGnZCvwT4QzMsc2cx5PkKYa00ZBXnVZCFbiCMYEr1cmeMMCsAA8I05yRoENsZAZAa4OROdaoPwZBQL2PHJtSsShf2T61KYgZDZD";
         NSLog(@"%@", str);
         NSURL *url = [NSURL URLWithString:str];
@@ -86,6 +86,7 @@
     NSLog(@"%d", [data count]);
     
     [self reloadData];
+    [self.superview endEditing:YES];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
@@ -123,7 +124,6 @@
     }
     
     // Set the data for this cell:
-    
     cell.textLabel.text = [self.events objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = @"More text";
         
@@ -132,7 +132,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [indexPath row] * 20;
+    return 100.0;
 }
 
 @end
