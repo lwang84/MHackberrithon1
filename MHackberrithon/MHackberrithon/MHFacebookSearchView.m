@@ -31,7 +31,7 @@
         
         // Initialization code
         
-        NSString *str = [NSString stringWithFormat:@"https://graph.facebook.com/search?fields=name&q=%@&type=event&access_token=AAACEdEose0cBAFE9dD0CrrT5a5j1gnqcG22LlfEUhfNdLtZAq0SrQkMOq6Yhx5NJRXQ4z7lIdO0fjDpmeBPi4R5vhqH6gLDbCSmEhpQZDZD", [self.words stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
+        NSString *str = [NSString stringWithFormat:@"https://graph.facebook.com/search?fields=name&q=%@&type=event&access_token=AAACEdEose0cBAHERYEZCJt8M3oeeRewtVU3C5PGnMTuBqYeZCazGwplRJzqurZAZC9v54lDsxALshAvRwiKGI0soeZCD74AS0cZASwZAwXoegZDZD", [self.words stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
         //NSString *str = @"https://graph.facebook.com/search?fields=name&q=mhack&type=event&access_token=AAAAAAITEghMBAKGnZCvwT4QzMsc2cx5PkKYa00ZBXnVZCFbiCMYEr1cmeMMCsAA8I05yRoENsZAZAa4OROdaoPwZBQL2PHJtSsShf2T61KYgZDZD";
         NSLog(@"%@", str);
         NSURL *url = [NSURL URLWithString:str];
