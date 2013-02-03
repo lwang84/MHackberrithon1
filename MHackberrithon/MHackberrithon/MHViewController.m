@@ -131,7 +131,8 @@
     
     
     
-    
+    [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:self.image];
+    [(HBOverlayView *)(picker.cameraOverlayView) changeToRetakeButton];
     
     //NSMutableArray *dataArray = nil;
     dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
@@ -155,8 +156,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences words:words];
             [self.spinner removeFromSuperview];
-            [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:self.image];
-            [(HBOverlayView *)(picker.cameraOverlayView) changeToRetakeButton];
+            
             
         });
     });
