@@ -83,7 +83,9 @@
 - (void)drawRect:(CGRect)rect
 {
     NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-
+    NSString *phoneExpression = @".+[123456789.]+";
+    NSString *urlExpression = @"[w.]+[a-z.]+";
+    
     // Drawing code
     
     /*
@@ -106,6 +108,12 @@
     CGContextSetRGBStrokeColor(context, 0.0/255, 164.0/255, 248.0/255,1); // yellow line
     if ([self checkREGEX:emailExpression]){
         CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0); // red line
+    }
+    else if ([self checkREGEX:phoneExpression]) {
+        CGContextSetRGBStrokeColor(context, 0.0, 1.0, 0.0, 1.0);
+    }
+    else if([self checkREGEX:urlExpression]) {
+        CGContextSetRGBStrokeColor(context, 0.0, 0.0, 1.0, 1.0);
     }
     else {
         CGContextSetRGBStrokeColor(context, 1.0, 1.0, 0.0, 1.0); // yellow line
