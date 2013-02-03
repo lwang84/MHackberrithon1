@@ -14,6 +14,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        [self setFont: [ UIFont systemFontOfSize: 23 ]];
+        //[self setTextColor:[UIColor blackColor]];
+
         // Initialization code
     }
     return self;

@@ -148,7 +148,7 @@
         [boxes addObject:[NSValue valueWithCGRect:box]];
         int confidence =  [(MHData *)[dataArray objectAtIndex:i] confidence];
         [confidences addObject:[NSNumber numberWithInt:confidence]];
-        NSString *w = [NSString stringWithUTF8String:[(MHData *)[dataArray objectAtIndex:i] symbol]];
+        NSString *w = [(MHData *)[dataArray objectAtIndex:i] symbol];
         if (w == nil){
             w = @"";
         }

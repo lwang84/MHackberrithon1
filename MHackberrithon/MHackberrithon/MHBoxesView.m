@@ -36,8 +36,13 @@
     for (int i = 0; i < [self.boxes count]; i++) {
         CGRect box =  [(NSValue *)[self.boxes objectAtIndex:i] CGRectValue];
         CGRect scaledBox = [self scaleBox:box];
-        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i]];
+        
+        MHConfirmButtons * confirm = [[MHConfirmButtons alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        MHRecognizedTextView * textview = [[MHRecognizedTextView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+
+        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i] buttons:confirm textview:textview];
         //[complex addSubview:boxView];
+        boxView.delegate = self;
         
         double delay = (arc4random() % 20)*1.0/20*0.7;
         
@@ -104,9 +109,20 @@
 
 - (void) clearBoxes {
     for (UIView *view in self.subviews) {
-        if ([view isKindOfClass:[MHBox class]]) {
+        if ([view isKindOfClass:[MHBox class]] || [view isKindOfClass:[MHConfirmButtons class]] || [view isKindOfClass:[MHRecognizedTextView class]]) {
             [view removeFromSuperview];
         }
     }
+}
+
+-(void)originalGotTapped: (MHBox *) original;
+{
+    for (UIView *view in self.subviews) {
+        if (([view isKindOfClass:[MHConfirmButtons class]] && view != original.confirmView) || ([view isKindOfClass:[MHRecognizedTextView class]] && view != original.textView)) {
+            [view removeFromSuperview];
+        }
+    }
+    
+    NSLog(@"in delegate");
 }
 @end

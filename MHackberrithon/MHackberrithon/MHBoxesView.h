@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Tesseract.h"
+#import "MHBox.h"
 
 @class MHBoxesView;
 
@@ -17,7 +18,7 @@
 
 @end
 
-@interface MHBoxesView : UIView
+@interface MHBoxesView : UIView <MHBoxDelegate>
 
 - (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences words:(NSMutableArray *)w;
 

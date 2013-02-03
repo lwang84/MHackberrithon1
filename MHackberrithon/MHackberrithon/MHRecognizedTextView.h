@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MHRecognizedTextView : UIView
+@interface MHRecognizedTextView : UITextView
 
 @end

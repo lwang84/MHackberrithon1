@@ -12,9 +12,9 @@
 
 @property int top, bottom, right, left;
 @property float confidence;
-@property const char *symbol;
+@property NSString *symbol;
 @property CGRect box;
 
-- (id) initWithConfidence:(float)fi word:(const char*)w left: (int) l right: (int) r top: (int) t bottom: (int) b;
+- (id) initWithConfidence:(float)fi word:(NSString*)w left: (int) l right: (int) r top: (int) t bottom: (int) b;
 
 @end

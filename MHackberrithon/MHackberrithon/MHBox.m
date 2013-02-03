@@ -14,6 +14,7 @@
 
 @synthesize confirmView;
 @synthesize textView;
+@synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
                word:(NSString *)w
@@ -23,7 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        //self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor blueColor];
         self.alpha = 0.4;
         self.layer.cornerRadius = 4;
         /*
@@ -42,16 +43,43 @@
 
 - (void) originalTapped: (UIButton *)btn
 {
+    confirmView.frame = CGRectMake(self.frame.origin.x+self.frame.size.width-30, self.frame.origin.y+self.frame.size.height, 30, 30);
+    [self.superview addSubview:confirmView];    
+    textView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y-70, self.frame.size.width, 100);
+    [self.superview addSubview:textView];
+    textView.text = self.word;
+    
+    [self.delegate originalGotTapped:self];
     NSLog(@"%@",self.word);
 }
 
+
+- (BOOL) checkREGEX: (NSString *) expression {
+    if (self.word == nil){
+        return NO;
+    }
+    NSError *error = NULL;
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:&error];
+    
+    NSTextCheckingResult *match = [regex firstMatchInString:self.word options:0 range:NSMakeRange(0, [self.word length])];
+    
+    if (match){
+        return YES;
+    }else{
+        return NO;
+    }
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+
     // Drawing code
     
+    /*
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
 	CGRect frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
@@ -64,11 +92,17 @@
 	CGContextFillPath(ctx);
     
 	CGPathRelease(roundedRectPath);
-    
+    */
     
     /*
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetRGBStrokeColor(context, 0.0/255, 164.0/255, 248.0/255,1); // yellow line
+    if ([self checkREGEX:emailExpression]){
+        CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0); // red line
+    }
+    else {
+        CGContextSetRGBStrokeColor(context, 1.0, 1.0, 0.0, 1.0); // yellow line
+    }
     
     CGContextStrokeRect(context, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
     CGContextStrokePath(context);
