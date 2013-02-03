@@ -14,5 +14,6 @@
 @interface MHViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, MHOverlayViewDelegate>
 
 @property UIImagePickerController *picker;
+@property UIActivityIndicatorView *spinner;
 
 @end

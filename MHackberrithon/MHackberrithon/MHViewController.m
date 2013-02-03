@@ -103,6 +103,10 @@
     NSLog(@"picture taken");
 
     
+    
+
+    
+    
     self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     NSLog(@"%f,%f", self.image.size.width, self.image.size.height);
 
@@ -124,46 +128,73 @@
     CGSize size = [nImage size];
     [tesseract setImage:nImage];
     //[tesseract recognize];
+    
+    
+    
+    
+    
+    //NSMutableArray *dataArray = nil;
+    dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
+    dispatch_async(downloadQueue, ^{
+        NSMutableArray *dataArray = [tesseract recognizeByWord];
+        int n = [dataArray count];
+        NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
+        NSMutableArray *confidences = [[NSMutableArray alloc] initWithCapacity:n];
+        NSMutableArray *words = [[NSMutableArray alloc] initWithCapacity: n];
+        for (int i = 0; i < n; i++) {
+            CGRect box =  [(MHData *)[dataArray objectAtIndex:i] box];
+            [boxes addObject:[NSValue valueWithCGRect:box]];
+            int confidence =  [(MHData *)[dataArray objectAtIndex:i] confidence];
+            [confidences addObject:[NSNumber numberWithInt:confidence]];
+            NSString *w = [(MHData *)[dataArray objectAtIndex:i] symbol];
+            if (w == nil){
+                w = @"";
+            }
+            [words addObject:w];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences words:words];
+            [self.spinner removeFromSuperview];
+            [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:self.image];
+            [(HBOverlayView *)(picker.cameraOverlayView) changeToRetakeButton];
+            
+        });
+    });
+    dispatch_release(downloadQueue);
+    
+    
+    
+
     NSLog(@"start");
-    NSMutableArray *dataArray = [tesseract recognizeByWord];
     NSLog(@"end");
-    [tesseract getWordBoxes];
-    [tesseract getBlockBoxes];
+    //[tesseract getWordBoxes];
+    //[tesseract getBlockBoxes];
     
     //int n = [tesseract getBoxesCount];
     //int n = [tesseract getBlockCount];
     
 //    [tesseract getWordBoxes];
 //    [tesseract getBlockBoxes];
-//    
-    int n = [dataArray count];
+//
+    
+    
+    
+
+    
 //    //int n = [tesseract getBlockCount];
 //    
-    NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
-    NSMutableArray *confidences = [[NSMutableArray alloc] initWithCapacity:n];
-    NSMutableArray *words = [[NSMutableArray alloc] initWithCapacity: n];
-//    
-    for (int i = 0; i < n; i++) {
-        CGRect box =  [(MHData *)[dataArray objectAtIndex:i] box];
-        [boxes addObject:[NSValue valueWithCGRect:box]];
-        int confidence =  [(MHData *)[dataArray objectAtIndex:i] confidence];
-        [confidences addObject:[NSNumber numberWithInt:confidence]];
-        NSString *w = [(MHData *)[dataArray objectAtIndex:i] symbol];
-        if (w == nil){
-            w = @"";
-        }
-        [words addObject:w];
-    }
     
-    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences words:words];
+//    
+    
+    
+    
     //[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer].boxes = boxes;
 
     //NSLog(@"box count = %d", n);
     //NSLog(@"%@", [tesseract recognizedText]);
 
     //UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    [(HBOverlayView *)(picker.cameraOverlayView) setStaticImage:self.image];
-    
+        
 //    MHImageEditorViewController *imageEditor = [[MHImageEditorViewController alloc] initWithNibName:@"MHImageEditorViewController" bundle:nil];
 //    imageEditor.image = self.image;
 //    
@@ -173,11 +204,18 @@
 //        [self dismissModalViewControllerAnimated:NO];
 //    }
 //    [self presentModalViewController:imageEditor animated:NO];
-    [(HBOverlayView *)(picker.cameraOverlayView) changeToRetakeButton];
+    
 }
 
 - (void) needTakePicture: (HBOverlayView *)overlay
 {
+    self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.spinner startAnimating];
+    
+    self.spinner.frame = CGRectMake(overlay.frame.size.width/2-25, overlay.frame.size.height/2-25, 50, 50);
+    
+    [overlay addSubview:self.spinner];
+    [overlay bringSubviewToFront:self.spinner];
     
     [picker takePicture];
 }

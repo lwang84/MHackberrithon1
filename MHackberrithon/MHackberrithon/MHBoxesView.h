@@ -41,4 +41,6 @@
 @property (assign) id<MHBoxesViewDelegate>delegate;
 
 -(void) clearBoxes;
+-(void) clearDetailInfo;
+
 @end
