@@ -106,6 +106,7 @@
     [self bringSubviewToFront:freezeButton];
     
     [boxesLayer clearBoxes];
+    [boxesLayer clearDetailInfo];
 }
 
 - (void) changeToRetakeButton

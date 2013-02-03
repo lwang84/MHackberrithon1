@@ -122,6 +122,13 @@
     }
 }
 
+- (void) clearDetailInfo {
+    [self.indicator removeFromSuperview];
+    [self.confirmView removeFromSuperview];
+    [self.textView removeFromSuperview];
+    [self.searchBtn removeFromSuperview];
+}
+
 -(void)originalGotTapped: (MHBox *) original recognizedString:(NSString *)str
 {
     //spiky solution:
