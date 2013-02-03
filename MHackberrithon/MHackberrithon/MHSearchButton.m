@@ -13,7 +13,7 @@
 @implementation MHSearchButton
 
 @synthesize assignedSuperView;
-- (id)initWithFrame:(CGRect)frame assignedSuper: (UIView *)view
+- (id)initWithFrame:(CGRect)frame assignedSuper: (UIView *)view words:(NSString *)w
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -21,6 +21,7 @@
         assignedSuperView = view;
         [self addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
         // Initialization code
+        self.words = w;
     }
     return self;
 }
@@ -28,8 +29,7 @@
 - (void)tapped: (UIButton *) btn
 {
     NSLog(@"facebook");
-    MHFacebookSearchView * facebook = [[MHFacebookSearchView alloc] initWithFrame:CGRectMake(0, assignedSuperView.frame.size.height, assignedSuperView.frame.size.width, assignedSuperView.frame.size.height)];
-    
+    MHFacebookSearchView * facebook = [[MHFacebookSearchView alloc] initWithFrame:CGRectMake(0, assignedSuperView.frame.size.height, assignedSuperView.frame.size.width, assignedSuperView.frame.size.height) style:UITableViewStylePlain words:self.words];
     [assignedSuperView addSubview:facebook];
     
     UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut;
