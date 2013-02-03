@@ -7,7 +7,6 @@
 //
 
 #import "HBOverlayView.h"
-#import "ScanButton.h"
 #import "MHCameraMaskView.h"
 
 @implementation HBOverlayView
@@ -24,19 +23,13 @@
 		self.opaque = NO;
 		self.backgroundColor = [UIColor clearColor];
 		
-		ScanButton *scanButton = [[ScanButton alloc] initWithFrame:CGRectMake(130, 320, 60, 30)];
-		
-		// Add a target action for the button:
-		[scanButton addTarget:self action:@selector(scanButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
-		[self addSubview:scanButton];
-        
         //boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(self.frame.size.width*1.0/3, 0, self.frame.size.width*1.0/3, self.frame.size.height)];
         boxesLayer = [[MHBoxesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height*1.0/3, self.frame.size.width, self.frame.size.height*1.0/3)];
         boxesLayer.delegate = self;
         [self addSubview:boxesLayer];
         [self bringSubviewToFront:boxesLayer];
         
-        freezeButton = [[MHFreezeCameraButton alloc] initWithFrame:CGRectMake(self.frame.size.width*2.0/5, self.frame.size.height*5.0/6, self.frame.size.width*1.0/5, self.frame.size.height*1.0/12)];
+        freezeButton = [[MHFreezeCameraButton alloc] initWithFrame:CGRectMake(self.frame.size.width*1.5/5, self.frame.size.height*4.5/6, self.frame.size.width*2.0/5, self.frame.size.height*1.0/10)];
         [freezeButton addTarget:self action:@selector(captureTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:freezeButton];
         [self bringSubviewToFront:freezeButton];

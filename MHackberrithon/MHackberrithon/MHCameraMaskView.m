@@ -16,7 +16,7 @@
     if (self) {
 
         self.backgroundColor = [UIColor clearColor];
-        self.alpha = 0.83;
+        self.alpha = 0.75;
     }
     return self;
 }

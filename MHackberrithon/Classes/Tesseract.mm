@@ -22,6 +22,9 @@ namespace tesseract {
     tesseract::TessBaseAPI* _tesseract;
     uint32_t* _pixels;
     Boxa* _boxa;
+    
+    Boxa* _lines;
+    Boxa* _blocks;
 }
 
 @end
@@ -108,9 +111,47 @@ namespace tesseract {
     return YES;
 }
 
-- (BOOL)recognize {
+- (BOOL)recognize {    
     int returnCode = _tesseract->Recognize(NULL);
     return (returnCode == 0) ? YES : NO;
+}
+
+-(BOOL) recognizeByWord{
+    _tesseract->Recognize(0);
+    tesseract::ResultIterator* ri = _tesseract->GetIterator();
+    tesseract::ChoiceIterator* ci;
+    
+    if(ri != 0)
+    {
+        do
+        {
+            const char* symbol = ri->GetUTF8Text(tesseract::RIL_TEXTLINE);
+            float confidence = ri->Confidence(tesseract::RIL_TEXTLINE);
+            NSLog([NSString stringWithUTF8String:symbol]);
+            /*
+            if(symbol != 0)
+            {
+                float conf = ri->Confidence(tesseract::RIL_SYMBOL);
+                std::cout << "\tnext symbol: " << symbol << "\tconf: " << conf << "\n";
+                
+                const tesseract::ResultIterator itr = *ri;
+                ci = new tesseract::ChoiceIterator(itr);
+                
+                do
+                {
+                    const char* choice = ci->GetUTF8Text();
+                    std::cout << "\t\t" << choice << " conf: " << ci->Confidence() << "\n";
+                }
+                while(ci->Next());
+                
+                delete ci; 
+            }*/
+            
+            delete[] symbol;
+        }
+        while((ri->Next(tesseract::RIL_TEXTLINE)));
+    }
+    return YES;
 }
 
 - (NSString *)recognizedText {
@@ -129,6 +170,24 @@ namespace tesseract {
 - (void) getWordBoxes {
     _boxa = _tesseract->GetWords(NULL);
 }
+
+- (void) getLineBoxes {
+    _lines = _tesseract->GetWords(NULL);
+}
+
+- (void) getBlockBoxes {
+    _blocks = _tesseract->GetTextlines(NULL, NULL);
+}
+
+- (int) getBlockCount {
+    return _blocks->n;
+}
+
+- (CGRect) getBlock:(int) i{
+    Box** boxes = _blocks->box;
+    return CGRectMake(1.0*boxes[i]->x, 1.0*boxes[i]->y, 1.0*boxes[i]->w, 1.0*boxes[i]->h);
+}
+
 
 - (int) getBoxesCount {
     return _boxa->n;

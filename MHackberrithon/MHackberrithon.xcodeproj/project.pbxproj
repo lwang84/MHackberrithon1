@@ -45,7 +45,6 @@
 		FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAD216BCD40900317762 /* MHSmileyFace.m */; };
 		FCCEAAE816BCE40700317762 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */; };
 		FCCEAAEF16BCE4FB00317762 /* HBOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */; };
-		FCCEAAF116BCE4FB00317762 /* ScanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEAAEE16BCE4FB00317762 /* ScanButton.m */; };
 		FCCEAAF416BCE53D00317762 /* overlaygraphic.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEAAF216BCE53D00317762 /* overlaygraphic.png */; };
 		FCCEAAF516BCE53D00317762 /* scanbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEAAF316BCE53D00317762 /* scanbutton.png */; };
 		FCCEAAF816BCECA600317762 /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = FCCEAAF616BCECA600317762 /* eng.traineddata */; };
@@ -261,8 +260,6 @@
 		FCCEAAE716BCE40700317762 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FCCEAAE916BCE4FA00317762 /* HBOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBOverlayView.h; sourceTree = "<group>"; };
 		FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBOverlayView.m; sourceTree = "<group>"; };
-		FCCEAAED16BCE4FB00317762 /* ScanButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanButton.h; sourceTree = "<group>"; };
-		FCCEAAEE16BCE4FB00317762 /* ScanButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanButton.m; sourceTree = "<group>"; };
 		FCCEAAF216BCE53D00317762 /* overlaygraphic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlaygraphic.png; sourceTree = "<group>"; };
 		FCCEAAF316BCE53D00317762 /* scanbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanbutton.png; sourceTree = "<group>"; };
 		FCCEAAF616BCECA600317762 /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
@@ -362,8 +359,6 @@
 				FCCEAAEA16BCE4FB00317762 /* HBOverlayView.m */,
 				FC78D47316BD6820005B3CFF /* MHCameraMaskView.h */,
 				FC78D47416BD6820005B3CFF /* MHCameraMaskView.m */,
-				FCCEAAED16BCE4FB00317762 /* ScanButton.h */,
-				FCCEAAEE16BCE4FB00317762 /* ScanButton.m */,
 				430AA19E16BCCEE10064D0DA /* Supporting Files */,
 				430AA34416BD01EF0064D0DA /* MHLoginViewController.h */,
 				430AA34516BD01EF0064D0DA /* MHLoginViewController.m */,
@@ -730,7 +725,6 @@
 				430AA1B416BCCEE10064D0DA /* MHViewController.m in Sources */,
 				FCCEAAD316BCD40900317762 /* MHSmileyFace.m in Sources */,
 				FCCEAAEF16BCE4FB00317762 /* HBOverlayView.m in Sources */,
-				FCCEAAF116BCE4FB00317762 /* ScanButton.m in Sources */,
 				430AA32816BCEE500064D0DA /* Tesseract.mm in Sources */,
 				FC926AA316BCF53E00D8EF00 /* MHImagePickerController.m in Sources */,
 				430AA34616BD01EF0064D0DA /* MHLoginViewController.m in Sources */,
