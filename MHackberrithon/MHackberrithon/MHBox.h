@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MHConfirmButtons.h"
 #import "MHRecognizedTextView.h"
+#import "MHSearchButton.h"
 
 
 @class MHBox;
@@ -24,10 +25,10 @@
 
 @property NSString *word;
 
-- (id)initWithFrame:(CGRect)frame word:(NSString *)w;
-
 @property (retain) MHConfirmButtons * confirmView;
 @property (retain) MHRecognizedTextView * textView;
+@property (retain) MHSearchButton * searchBtn;
+
 - (BOOL) checkREGEX: (NSString *) expression;
 @property (assign) id<MHBoxDelegate>delegate;
 
@@ -35,6 +36,7 @@
 - (id)initWithFrame:(CGRect)frame
                word:(NSString *)w
             buttons:(MHConfirmButtons *)btns
-           textview:(MHRecognizedTextView *)txtview;
+           textview:(MHRecognizedTextView *)txtview
+          searchBtn:(MHSearchButton *) search;
 
 @end

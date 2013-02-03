@@ -39,8 +39,9 @@
         
         MHConfirmButtons * confirm = [[MHConfirmButtons alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         MHRecognizedTextView * textview = [[MHRecognizedTextView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-
-        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i] buttons:confirm textview:textview];
+        MHSearchButton * search = [[MHSearchButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0) assignedSuper:self.superview];
+        
+        MHBox *boxView = [[MHBox alloc] initWithFrame:CGRectMake(scaledBox.origin.x+scaledBox.size.width/2, scaledBox.origin.y+scaledBox.size.height/2, 0, 0) word:[self.words objectAtIndex:i] buttons:confirm textview:textview searchBtn:search];
         //[complex addSubview:boxView];
         boxView.delegate = self;
         
@@ -118,7 +119,7 @@
 -(void)originalGotTapped: (MHBox *) original;
 {
     for (UIView *view in self.subviews) {
-        if (([view isKindOfClass:[MHConfirmButtons class]] && view != original.confirmView) || ([view isKindOfClass:[MHRecognizedTextView class]] && view != original.textView)) {
+        if (([view isKindOfClass:[MHConfirmButtons class]] && view != original.confirmView) || ([view isKindOfClass:[MHRecognizedTextView class]] && view != original.textView) || ([view isKindOfClass:[MHSearchButton class]] && view != original.searchBtn)) {
             [view removeFromSuperview];
         }
     }

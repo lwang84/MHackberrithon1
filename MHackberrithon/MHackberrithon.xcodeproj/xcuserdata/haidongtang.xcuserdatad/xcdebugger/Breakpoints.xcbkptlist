@@ -13,7 +13,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "87"
          endingLineNumber = "87"
-         landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+         landmarkName = "-buttonTapped:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -26,7 +26,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "83"
          endingLineNumber = "83"
-         landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+         landmarkName = "-buttonTapped:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
