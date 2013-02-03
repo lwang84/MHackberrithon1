@@ -25,16 +25,17 @@
     return self;
 }
 
-- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences
+- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences words:(NSMutableArray *)w
 {
     self.boxes = boxes;
     self.imageSize = size;
     self.confidences = confidences;
+    self.words = w;
     
     for (int i = 0; i < [self.boxes count]; i++) {
         CGRect box =  [(NSValue *)[self.boxes objectAtIndex:i] CGRectValue];
         CGRect scaledBox = [self scaleBox:box];
-        MHBox *boxView = [[MHBox alloc] initWithFrame:scaledBox word:nil];
+        MHBox *boxView = [[MHBox alloc] initWithFrame:scaledBox word:[self.words objectAtIndex:i]];
         [self addSubview:boxView];
     }
 

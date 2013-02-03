@@ -141,17 +141,21 @@
 //    
     NSMutableArray *boxes = [[NSMutableArray alloc] initWithCapacity:n];
     NSMutableArray *confidences = [[NSMutableArray alloc] initWithCapacity:n];
-//    NSMutableArray *words = [[NSMutableArray alloc] initWithCapacity: n];
+    NSMutableArray *words = [[NSMutableArray alloc] initWithCapacity: n];
 //    
     for (int i = 0; i < n; i++) {
         CGRect box =  [(MHData *)[dataArray objectAtIndex:i] box];
         [boxes addObject:[NSValue valueWithCGRect:box]];
         int confidence =  [(MHData *)[dataArray objectAtIndex:i] confidence];
         [confidences addObject:[NSNumber numberWithInt:confidence]];
-//        //[words addObject:[NSString stringWithUTF8String:[tesseract getWordAt:i]]];
+        NSString *w = [NSString stringWithUTF8String:[(MHData *)[dataArray objectAtIndex:i] symbol]];
+        if (w == nil){
+            w = @"";
+        }
+        [words addObject:w];
     }
     
-    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences];
+    [[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer] setBoxesWithBoxes:boxes imageSize:size wordsConfidences:confidences words:words];
     //[(HBOverlayView *)(picker.cameraOverlayView) boxesLayer].boxes = boxes;
 
     //NSLog(@"box count = %d", n);

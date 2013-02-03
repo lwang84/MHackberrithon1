@@ -19,10 +19,11 @@
 
 @interface MHBoxesView : UIView
 
-- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences;
+- (void)setBoxesWithBoxes:(NSMutableArray*)boxes imageSize:(CGSize) size wordsConfidences:(NSMutableArray *)confidences words:(NSMutableArray *)w;
 
 @property NSMutableArray *boxes;
 @property NSMutableArray *confidences;
+@property NSMutableArray *words;
 
 @property CGSize imageSize;
 
