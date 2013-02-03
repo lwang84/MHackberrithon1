@@ -16,7 +16,7 @@
 
 @protocol MHBoxDelegate
 
--(void)originalGotTapped: (MHBox *) original;
+-(void)originalGotTapped: (MHBox *) original recognizedString: (NSString *) str;
 
 @end
 

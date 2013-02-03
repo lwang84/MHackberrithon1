@@ -37,6 +37,7 @@
     MHFacebookSearchView * facebook = [[MHFacebookSearchView alloc] initWithFrame:CGRectMake(0, assignedSuperView.frame.size.height, assignedSuperView.frame.size.width, assignedSuperView.frame.size.height)];
     
     [assignedSuperView addSubview:facebook];
+    [assignedSuperView bringSubviewToFront:facebook];
     
     UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut;
     [UIView animateWithDuration:0.3 delay:0.0 options:options animations:^{

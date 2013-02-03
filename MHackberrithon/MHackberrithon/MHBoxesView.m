@@ -22,6 +22,12 @@
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
         [self addGestureRecognizer:tapGesture];
         
+        CGRect superframe = self.frame;
+        self.textView = [[MHRecognizedTextView alloc] initWithFrame:CGRectMake(superframe.size.width*0.05, superframe.size.height*0.03, superframe.size.width*0.9, superframe.size.height/3*0.7)];
+        self.searchBtn = [[MHSearchButton alloc]initWithFrame:CGRectMake(superframe.size.width*0.95-70, superframe.size.height*(1.0/3*0.7+0.03), 30, 30) assignedSuper:self];
+        self.confirmView = [[MHConfirmButtons alloc] initWithFrame:CGRectMake(superframe.size.width*0.95-30, superframe.size.height*(1.0/3*0.7+0.03), 30, 30)];
+        self.indicator = nil;
+        
     }
     return self;
 }
@@ -116,14 +122,56 @@
     }
 }
 
--(void)originalGotTapped: (MHBox *) original;
+-(void)originalGotTapped: (MHBox *) original recognizedString:(NSString *)str
 {
-    for (UIView *view in self.subviews) {
-        if (([view isKindOfClass:[MHConfirmButtons class]] && view != original.confirmView) || ([view isKindOfClass:[MHRecognizedTextView class]] && view != original.textView) || ([view isKindOfClass:[MHSearchButton class]] && view != original.searchBtn)) {
-            [view removeFromSuperview];
-        }
-    }
+    //spiky solution:
+    self.searchBtn.assignedSuperView = self.superview;
     
+    [self.superview addSubview:self.confirmView];
+    [self.superview addSubview:self.textView];
+    [self.superview addSubview:self.searchBtn];
+    
+    [self.indicator removeFromSuperview];
+    
+    NSString *emailExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSString *phoneExpression = @".+[123456789.]+";
+    NSString *urlExpression = @"[w.]+[a-z.]+";
+    
+    if ([self checkREGEX:emailExpression forString:str]){
+        self.indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40) imageName:@"gamil.png"];
+        [self.superview addSubview:self.indicator];
+        
+    }
+    else if ([self checkREGEX:phoneExpression forString:str]) {
+        self.indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40) imageName:@"phone1.png"];
+        [self.superview addSubview:self.indicator];
+        
+    }
+    else if([self checkREGEX:urlExpression forString:str]) {
+        self.indicator = [[MHTypeIndicator alloc] initWithFrame:CGRectMake(0, 0, 40, 40)imageName:@"web1.png"];
+        [self.superview addSubview:self.indicator];
+        
+    }
+
+    
+    self.textView.text = str;
     NSLog(@"in delegate");
+}
+
+- (BOOL) checkREGEX: (NSString *) expression  forString: (NSString *)str{
+    if (str == nil){
+        return NO;
+    }
+    NSError *error = NULL;
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:&error];
+    
+    NSTextCheckingResult *match = [regex firstMatchInString:str options:0 range:NSMakeRange(0, [str length])];
+    
+    if (match){
+        return YES;
+    }else{
+        return NO;
+    }
 }
 @end

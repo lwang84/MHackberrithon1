@@ -10,6 +10,11 @@
 #import "Tesseract.h"
 #import "MHBox.h"
 
+#import "MHRecognizedTextView.h"
+#import "MHConfirmButtons.h"
+#import "MHSearchButton.h"
+#import "MHTypeIndicator.h"
+
 @class MHBoxesView;
 
 @protocol MHBoxesViewDelegate 
@@ -25,6 +30,11 @@
 @property NSMutableArray *boxes;
 @property NSMutableArray *confidences;
 @property NSMutableArray *words;
+
+@property (retain) MHConfirmButtons * confirmView;
+@property (retain) MHRecognizedTextView * textView;
+@property (retain) MHSearchButton * searchBtn;
+@property (retain) MHTypeIndicator * indicator;
 
 @property CGSize imageSize;
 
