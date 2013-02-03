@@ -84,4 +84,11 @@
     [self.delegate needChangeLabel:@"taped"];
 }
 
+- (void) clearBoxes {
+    for (UIView *view in self.subviews) {
+        if ([view isKindOfClass:[MHBox class]]) {
+            [view removeFromSuperview];
+        }
+    }
+}
 @end

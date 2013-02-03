@@ -39,10 +39,10 @@
         [retakeButton addTarget:self action:@selector(retakeTapped:) forControlEvents:UIControlEventTouchUpInside];
         
         
-        wordLabel = [[MHWordLabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height *1.0/3)];
-        wordLabel.text = @"test";
-        [self addSubview:wordLabel];
-        [self bringSubviewToFront:wordLabel];
+//        wordLabel = [[MHWordLabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height *1.0/3)];
+//        wordLabel.text = @"test";
+//        [self addSubview:wordLabel];
+//        [self bringSubviewToFront:wordLabel];
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
         [self addGestureRecognizer:tapGesture];
@@ -103,6 +103,8 @@
     [retake removeFromSuperview];
     [self addSubview:freezeButton];
     [self bringSubviewToFront:freezeButton];
+    
+    [boxesLayer clearBoxes];
 }
 
 - (void) changeToRetakeButton
